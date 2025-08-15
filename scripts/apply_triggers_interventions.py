@@ -27,8 +27,8 @@ def main():
         window = daily.iloc[i-6:i+1]
         rhr7 = window["rhr_bpm"].mean()
         hrv_now = window["hrv_ms"].iloc[-1]
-        hrv_prev = window["hrv_ms"].iloc[-2]
-        hrv_drop = (hrv_prev - hrv_now) / max(1e-6, hrv_prev)
+        hrv_prev_3d = window["hrv_ms"].iloc[-4:-1].mean()  # last 3 days before current
+        hrv_drop = (hrv_prev_3d - hrv_now) / max(1e-6, hrv_prev_3d)
         if rhr7 > rhr_baseline + 5 or hrv_drop > 0.15:
             d = daily["date"].iloc[i]
             follow = d + timedelta(days=7)
