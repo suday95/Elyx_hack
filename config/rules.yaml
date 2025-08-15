@@ -1,0 +1,91 @@
+adherence:
+  base: 0.75
+  travel_penalty_per_day: 0.15
+  illness_penalty_per_day: 0.25
+  recovery_bonus: 0.05
+  noise_std: 0.05
+
+weight:
+  weekly_loss_if_high_adherence: 0.25
+  plateau_after_days: 14
+  plateau_weekly_loss: 0.15
+  travel_water_gain: 0.3
+  noise_std: 0.2
+
+rhr:
+  weekly_drop_if_cardio3: 0.5
+  travel_bump: [2, 5]
+  illness_bump: [5, 10]
+  noise_std: 1.0
+
+hrv:
+  weekly_gain_if_good_sleep: [1, 2.5]
+  travel_drop: [3, 8]
+  illness_drop: [5, 15]
+  noise_std: 2.0
+
+sleep:
+  base: 6.5
+  travel_drop: [0.5, 1.0]
+  recovery_bonus: 0.3
+  noise_std: 0.4
+
+lipids_monthly:
+  ldl_drop_if_good: [2, 5]
+  hdl_gain_if_good: [0.5, 1.5]
+  tg_drop_if_good: [4, 10]
+  noise_std: 1.0
+
+glycemic_monthly:
+  fasting_drop_if_good: [1, 3]
+  ogtt2h_drop_if_good: [2, 6]
+  illness_spike_fpg: [5, 15]
+  noise_std: 0.8
+
+inflammation:
+  crp_spike_illness: [1.0, 2.5]
+  mean_revert_rate: 0.05
+  noise_std: 0.1
+
+fitness:
+  vo2_weekly_gain_if_cardio3: [0.3, 0.5]
+  vo2_weekly_loss_if_low: 0.2
+  grip_weekly_gain_if_strength2: [0.2, 0.4]
+  fms_gain_per_4w_if_mobility2: 1
+  spirometry_monthly_gain: [0.02, 0.05]
+  noise_small: 0.05
+
+body_comp_monthly:
+  bodyfat_drop: [0.3, 0.6]
+  lean_mass_gain: 0.2
+
+triggers:
+  - id: CV-01
+    condition: "rhr_7d_avg > rhr_baseline + 5 OR hrv_3d_drop > 0.15"
+    action: "deload week; sleep hygiene; -20% intensity"
+    owner: coach
+    followup_days: 7
+
+  - id: LIP-02
+    condition: "ldl_mgdl > 130 at quarterly"
+    action: "tighten diet; +1 cardio; omega-3"
+    owner: nutritionist
+    followup_days: 84
+
+  - id: GLU-03
+    condition: "weight_stall_14d AND fasting_glucose>100"
+    action: "-10% calories OR +1 cardio"
+    owner: coach
+    followup_days: 14
+
+  - id: SLP-05
+    condition: "sleep_quality < 3 for 5d"
+    action: "sleep protocol; reduce intensity 1w"
+    owner: coach
+    followup_days: 7
+
+  - id: TRV-06
+    condition: "travel_week"
+    action: "hotel routines; hydration; light exposure plan"
+    owner: concierge
+    followup_days: 0
