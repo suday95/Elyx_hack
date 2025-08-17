@@ -1,5 +1,5 @@
 adherence:
-  base: 0.75
+  base: 0.50        # matches PS ~50% adherence
   travel_penalty_per_day: 0.15
   illness_penalty_per_day: 0.25
   recovery_bonus: 0.05
