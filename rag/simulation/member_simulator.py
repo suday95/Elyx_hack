@@ -1,7 +1,12 @@
 import random
-
+import csv 
 class MemberSimulator:
-    def __init__(self, timeline):
+    def __init__(self, name="Rohan", condition="high blood pressure",timeline=None):
+        self.name = name
+        self.condition = condition
+        self.residence = "Singapore"
+        self.plan_adherence = 0.5
+        self.load_member_messages()
         self.timeline = timeline
         self.research_topics = [
             "keto diet benefits", "HRV optimization", "apob cholesterol",
@@ -36,3 +41,13 @@ class MemberSimulator:
             "What's my fitness schedule this week?"
         ]
         return "Ruby", random.choice(questions)
+    def load_member_messages(self):
+        """Load sample member messages from CSV"""
+        try:
+            with open("/home/suday-nandan-reddy/Projects/AI/Elyx hackathon/rag/data/member_msg.csv") as f:
+                reader = csv.DictReader(f)
+                self.sample_messages = [row["message"] for row in reader]
+                
+        except:
+            self.generate_random_question()
+    

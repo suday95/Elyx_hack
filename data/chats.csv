@@ -467,26 +467,3 @@ datetime,sender,role,message,tags,linked_intervention_id
 2025-01-29 10:00 +0800,nutritionist,Nutritionist,Triggered LIP-02 due to ldl_mgdl=145.3. Action: tighten diet; +1 cardio; omega-3. Follow-up: 2025-04-23,intervention;labs,LIP-02
 2025-03-26 10:00 +0800,nutritionist,Nutritionist,Triggered LIP-02 due to ldl_mgdl=144.1. Action: tighten diet; +1 cardio; omega-3. Follow-up: 2025-06-18,intervention;labs,LIP-02
 2025-06-18 10:00 +0800,nutritionist,Nutritionist,Triggered LIP-02 due to ldl_mgdl=142.3. Action: tighten diet; +1 cardio; omega-3. Follow-up: 2025-09-10,intervention;labs,LIP-02
-2025-01-03,member,Dr. Warren,"I've been experiencing digestive problems, what should I do?",No response generated
-2025-01-05,member,Ruby,When is my next blood test?,No response generated
-2025-01-06,member,Carla,"I've been experiencing joint pain, what should I do?",No response generated
-2025-01-07,member,,Can you explain keto diet benefits and how it applies to my health?,No response generated
-2025-01-10,member,Ruby,Can we reschedule my MRI?,No response generated
-2025-01-11,member,Carla,"I've been experiencing joint pain, what should I do?",No response generated
-2025-01-12,member,Ruby,What's on my schedule for tomorrow?,No response generated
-2025-01-13,member,Ruby,Can we reschedule my MRI?,No response generated
-2025-01-14,member,Ruby,What's my fitness schedule this week?,No response generated
-2025-01-15,member,Carla,"I've been experiencing joint pain, what should I do?",No response generated
-2025-01-16,member,Advik,"I've been experiencing recovery challenges, what should I do?",No response generated
-2025-01-17,member,Advik,"I've been experiencing recovery challenges, what should I do?",No response generated
-2025-01-19,member,Advik,"I've been experiencing joint pain, what should I do?",No response generated
-2025-01-20,member,,Can you explain stress management and how it applies to my health?,No response generated
-2025-01-23,member,Advik,"I've been experiencing sleep issues, what should I do?",No response generated
-2025-01-24,member,,Can you explain keto diet benefits and how it applies to my health?,No response generated
-2025-01-25,member,Ruby,When is my next blood test?,No response generated
-2025-01-26,member,Ruby,Do I have any upcoming appointments?,No response generated
-2025-01-27,member,,Can you explain apob cholesterol and how it applies to my health?,No response generated
-2025-01-28,member,,Can you explain keto diet benefits and how it applies to my health?,No response generated
-2025-01-30,member,Carla,"I've been experiencing recovery challenges, what should I do?",No response generated
-2025-01-02,member,Dr. Warren,"I've been experiencing joint pain, what should I do?",No response generated
-2025-01-02,member,Ruby,When is my next blood test?,"I don't have access to your blood test schedule.  To schedule your next blood test, please contact your doctor.  I can help coordinate this if you provide me with their contact information. [General Context]"

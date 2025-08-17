@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 # Initialize model at startup (not per-request)
 EMBEDDING_MODEL = SentenceTransformer('all-MiniLM-L6-v2')  # 384-dim embeddings
 CHROMA_PATH = Path(__file__).parent.parent / "chroma"
-
+from rag.scripts.router import route
 # Initialize client
 client = chromadb.PersistentClient(
     path=str(CHROMA_PATH),
@@ -87,11 +87,15 @@ def _normalize_date(since: Optional[str]) -> Optional[str]:
         # Assume caller gave ISO date already; you may still want to validate
         return since
 
-def retrieve(query, role, k=3, since=None):
+def retrieve(query, role=None, k=3, since=None):
+    if(role ==None):
+        role = route(query)
     normalized_role = normalize_role(role)
     role_ = ROLE_FILTERS.get(normalized_role, {}).copy()
-    since_iso = _normalize_date(since)
-    since_ts = to_ts(since_iso)
+    if since:
+        since = str(since)
+        since_iso = _normalize_date(since)
+        since_ts = to_ts(since_iso)
     where = _build_where(role_, None)
 
     # if since:

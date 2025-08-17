@@ -30,6 +30,7 @@ class EventScheduler:
                 "message": "Your full diagnostic results are ready. Let's review them together.",
                 "notified": False
             },
+            
             # Add more events
         ]
     
