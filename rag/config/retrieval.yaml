@@ -1,0 +1,73 @@
+# Base retrieval parameters
+defaults:
+  top_k: 8
+  embedding_model: "text-embedding-ada-002"
+  reranker: null  # "bge-reranker-large" if using reranker
+  temperature: 0.3
+  max_tokens: 500
+
+# Date filtering parameters
+date_ranges:
+  default_lookback: 30  # days
+  max_lookback: 90       # days
+
+# Role-specific retrieval preferences
+role_weights:
+  Dr. Warren:
+    type_weights:
+      lab: 1.5
+      intervention: 1.2
+      chat: 1.0
+    tag_weights:
+      labs: 1.8
+
+  Advik:
+    type_weights:
+      daily: 1.5
+      fitness: 1.3
+      chat: 1.0
+    tag_weights:
+      wearable: 1.7
+
+  Carla:
+    type_weights:
+      lab: 1.4
+      chat: 1.2
+      intervention: 1.0
+    tag_weights:
+      nutrition: 1.6
+      CGM: 1.5
+
+  Rachel:
+    type_weights:
+      fitness: 1.6
+      daily: 1.4
+      chat: 1.0
+    tag_weights:
+      mobility: 1.7
+      FMS: 1.5
+
+  Ruby:
+    type_weights:
+      event: 1.7
+      chat: 1.3
+      intervention: 1.0
+    tag_weights:
+      scheduling: 1.8
+
+  Neel:
+    type_weights:
+      kpi: 1.8
+      intervention: 1.3
+      chat: 1.0
+    tag_weights:
+      strategy: 1.9
+
+# Field mappings for metadata filtering
+metadata_fields:
+  date: ["labs", "intervention", "kpi"]
+  date_range: ["daily", "fitness"]
+  datetime: ["chat", "event"]
+  role: ["chat", "intervention"]
+  rule_id: ["intervention"]
+  tags: ["chat", "intervention"]
