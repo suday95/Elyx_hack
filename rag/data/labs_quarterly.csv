@@ -1,0 +1,4 @@
+date,fasting_glucose_mgdl,ogtt_2h_glucose_mgdl,fasting_insulin_uIUml,total_chol_mgdl,ldl_mgdl,hdl_mgdl,triglycerides_mgdl,apob_mgdl,apoa1_mgdl,lpa_nmoll,crp_mgL,esr_mmhr,alt_uL,ast_uL,creatinine_mgdl,egfr_mlmin,tsh_uIUmL,t3_ngdl,t4_ugdl,cortisol_ugdl,vitd_ngml,b12_pgml,ferritin_ngml,omega3_index_percent
+2025-01-29,98.7,135.6,12.5,224.9,144.4,47.0,167.4,105.2,141.0,60,1.81,9,30,27,1.0,95,2.2,120,8.2,16.0,24,420,120,5.0
+2025-03-26,99.8,136.4,12.5,222.2,142.7,46.4,165.7,105.7,140.4,60,1.66,9,30,27,1.0,95,2.2,120,8.2,16.0,24,420,120,5.0
+2025-06-18,100.6,134.6,12.5,217.0,140.0,45.8,155.7,106.5,139.8,60,1.68,9,30,27,1.0,95,2.2,120,8.2,16.0,24,420,120,5.0

@@ -1,0 +1,57 @@
+seed: 42
+member_id: rohan_001
+start_date: 2025-01-01
+months: 8
+
+baselines:
+  weight_kg: 82.0
+  rhr_bpm: 68
+  hrv_ms: 45
+  sleep_hours: 6.5
+  sleep_quality: 3
+  stress_score: 3
+  fasting_glucose_mgdl: 102
+  ogtt_2h_glucose_mgdl: 138
+  fasting_insulin_uIUml: 12.5
+  ldl_mgdl: 145
+  hdl_mgdl: 46
+  triglycerides_mgdl: 170
+  apob_mgdl: 105
+  lpa_nmoll: 60
+  crp_mgL: 1.8
+  tsh_uIUmL: 2.2
+  t3_ngdl: 120
+  t4_ugdl: 8.2
+  cortisol_ugdl: 16.0
+  vitd_ngml: 24
+  b12_pgml: 420
+  ferritin_ngml: 120
+  omega3_index_percent: 5.0
+  vo2max_est: 38.0
+  grip_strength_kg: 42
+  fms_score: 12
+  spirometry_fev1_L: 3.60
+  dexa_bodyfat_percent: 26.0
+  dexa_lean_mass_kg: 60.5
+  bone_density_tscore: 0.2
+
+bounds:
+  weight_kg: [72, 85]
+  rhr_bpm: [55, 75]
+  hrv_ms: [25, 65]
+  sleep_hours: [4.5, 8.5]
+  fasting_glucose_mgdl: [85, 110]
+  ldl_mgdl: [90, 160]
+  hdl_mgdl: [35, 70]
+  triglycerides_mgdl: [70, 200]
+  crp_mgL: [0.2, 6.0]
+  vo2max_est: [30, 50]
+  dexa_bodyfat_percent: [18, 28]
+
+cadence:
+  daily_metrics: true
+  weekly_rollups: true
+  quarterly_labs_weeks: [4,12, 24]
+  frequencies:
+    travel_every_n_weeks: 2
+    illness_probability_weekly: 0.1
