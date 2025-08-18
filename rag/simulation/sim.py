@@ -14,6 +14,123 @@ MEMBER_MSGS_CSV = "member_msgs.csv"  # Sample user messages
 OUTPUT_CSV = "/home/suday-nandan-reddy/Projects/AI/Elyx hackathon/rag/data/chats.csv"
 
 
+OPENROUTER_KEYS = ["https://openrouter.ai/api/v1/chat/completions", "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","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","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"]
+MODELS = {
+    "openrouter": [
+        "anthropic/claude-3-haiku",  # Free tier
+        "gryphe/mythomax-l2-13b",    # Free
+    ]
+}
+FALLBACK_MESSAGES = "fallback_messages.json"
+class APIManager:
+    def __init__(self):
+        self.gemini_index = 0
+        self.or_index = 0
+        self.model_index = 0
+        self.last_call = {}
+        self.load_fallbacks()
+    
+    def load_fallbacks(self):
+        """Load fallback messages from JSON"""
+        try:
+            with open(FALLBACK_MESSAGES) as f:
+                self.fallbacks = json.load(f)
+        except:
+            self.fallbacks = {
+                "member": [        "Can you explain my test results?",
+        "What's the best time to exercise?",
+        "How can I improve my sleep?"
+],
+                "elyx": ["Let me check that...", "I'll research this...", "Good question..."]
+            }
+    
+    def rotate_key(self, api_type: str) -> str:
+        """Rotate through available API keys"""
+        if api_type == "openrouter":
+            self.or_index = (self.or_index + 1) % len(OPENROUTER_KEYS)
+            return OPENROUTER_KEYS[self.or_index]
+
+    
+    def rotate_model(self, api_type: str) -> str:
+        """Rotate through available models"""
+        self.model_index = (self.model_index + 1) % len(MODELS[api_type])
+        return MODELS[api_type][self.model_index]
+    
+    def call_api(self, api_type: str, payload: Dict) -> Optional[str]:
+        """Smart API caller with rate limiting and fallback"""
+        # Rate limiting (2 calls/sec per API type)
+        if api_type in self.last_call:
+            elapsed = time.time() - self.last_call[api_type]
+            if elapsed < 0.5:  # 2 calls per second
+                time.sleep(0.5 - elapsed)
+        
+        try:
+            if api_type == "openrouter":
+                response = requests.post(
+                    "https://openrouter.ai/api/v1/chat/completions",
+                    headers={
+                        "Authorization": f"Bearer {self.rotate_key('openrouter')}",
+                        "HTTP-Referer": "https://yourdomain.com",
+                        "X-Title": "Elyx Health"
+                    },
+                    json={
+                        "model": self.rotate_model("openrouter"),
+                        "messages": payload["messages"],
+                        "max_tokens": 150
+                    },
+                    timeout=10
+                )
+            
+            self.last_call[api_type] = time.time()
+            
+            if response.status_code == 200:
+                return response.json()["choices"][0]["message"]["content"] if api_type == "openrouter" \
+                    else response.json()["candidates"][0]["content"]["parts"][0]["text"]
+            elif response.status_code == 429:  # Rate limited
+                print(f"Rate limited on {api_type}, rotating keys...")
+                return None
+            else:
+                print(f"API Error {response.status_code}")
+                return None
+        
+        except Exception as e:
+            print(f"API Connection Error: {str(e)}")
+            return None
+    
+    def get_response(self, api_type: str, prompt: str, role: str = None) -> str:
+        """Get response with multi-level fallback"""
+        # Try primary API
+        if api_type == "openrouter":
+            payload = {
+                "messages": [{
+                    "role": "user",
+                    "content": prompt
+                }]
+            }
+        response = self.call_api(api_type, payload)
+        if response:
+            return response
+        
+        # Fallback 1: Try alternate model
+        original_model = self.model_index
+        self.model_index = (self.model_index + 1) % len(MODELS[api_type])
+        response = self.call_api(api_type, payload)
+        if response:
+            return response
+        self.model_index = original_model  # Reset
+        
+        # Fallback 2: Try other API type
+        alt_api = "openrouter" if api_type == "gemini" else "gemini"
+        response = self.call_api(alt_api, payload)
+        if response:
+            return response
+        
+        # Final fallback: Local responses
+        return random.choice(self.fallbacks["elyx" if api_type == "gemini" else "member"])
+
+
+
+
 class Timeline:
     def __init__(self, start_date="2025-01-01"):
         self.current_datetime = datetime.strptime(start_date + " 08:00", "%Y-%m-%d %H:%M")
@@ -148,6 +265,8 @@ class ChatSimulator:
         self.test_schedule = self._generate_test_schedule()
         self.current_phase = "onboarding"
         self.initial = 0
+        self.api = APIManager()
+
     
     def _generate_test_schedule(self):
         """Schedule full diagnostics every 3 months"""
@@ -163,21 +282,8 @@ class ChatSimulator:
         # 30% chance to use OpenRouter for more varied responses
         if random.random() < 0.3:
             try:
-                response = requests.post(
-                    OPENROUTER_API,
-                    headers={
-                        "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-                        "Content-Type": "application/json"
-                    },
-                    json={
-                        "model": "gryphe/mythomax-l2-13b",  # Free model
-                        "messages": [{
-                            "role": "user",
-                            "content": f"Assume you are client named {self.member.name} Generate a short health-related question with {self.member.condition} or give a follow up for this message{message},tell it in your pov"
-                        }]
-                    },
-                    timeout=5
-                )
+                prompt = f"Assume you are client named {self.member.name} Generate a short health-related question with {self.member.condition} or give a follow up for this message{message},tell it in your pov"
+                response = self.api.get_response("openrouter", prompt)
                 if response.status_code == 200:
                     return response.json()["choices"][0]["message"]["content"]
             except:
@@ -240,7 +346,7 @@ class ChatSimulator:
     def simulate_day(self):
         """Simulate a day's worth of conversations (1-10 messages)"""
         self._update_phase()
-        interactions = random.randint(1, 3)  # 1-10 messages per day
+        interactions = random.randint(1, 4)  # 1-10 messages per day
         while True:
             event = self._generate_event_notification()
             if not event:
@@ -252,7 +358,7 @@ class ChatSimulator:
             # 60% chance member responds to notifications
             if random.random() < 0.6:
                 response = self._get_member_message(message)
-                self._add_chat_entry("Member", response)
+                self._add_chat_entry("Rohan", response)
                 
                 # 50% chance of follow-up
                 if random.random() < 0.5:
@@ -366,7 +472,7 @@ def main():
     # Run simulation for 8 months (240 days)
     print(f"Starting simulation from {timeline.get_current_time()} for 240 days...")
     
-    for day in range(5):
+    for day in range(240):
         if day % 30 == 0:  # Monthly status
             print(f"Processing day {day+1}/240 ({timeline.get_current_time()})")
         
