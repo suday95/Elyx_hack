@@ -2,12 +2,12 @@
 # ──────────────────────────────────────────────────────────────────────────────
 # Health Ops Console — Streamlit
 # Implements: data ingestion/normalization, caching, and pages:
-# Overview • Journey Timeline • Diagnostics & Labs • Daily/Weekly Trends •
-# Fitness & Body Composition • Interventions & Rationale • Chats • KPIs & Reports • Screening
+# Overview • Diagnostics & Labs • Daily/Weekly Trends •
+# Fitness & Body Composition • Interventions & Rationale • Chats • KPIs & Reports
 #
 # Drop your CSVs in ./data with these filenames:
 #   member_profile.csv, events.csv, daily.csv, weekly.csv, labs_quarterly.csv,
-#   fitness.csv, body_comp.csv, screening_static.csv, interventions.csv,
+#   fitness.csv, body_comp.csv, interventions.csv,
 #   chats.csv, kpis_monthly.csv
 #
 # Column name expectations are documented per loader; if yours differ, either
@@ -18,13 +18,13 @@ import io
 import os
 from datetime import datetime, timedelta
 from typing import Dict, Tuple, Optional
-
 import numpy as np
 import pandas as pd
 import streamlit as st
 
 # Optional but nice: Altair for interactive charts
 import altair as alt
+import html
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Config & Theme
@@ -49,6 +49,26 @@ DARK_CSS = """
 html, body, [data-testid="stAppViewContainer"] {
   background: linear-gradient(180deg, var(--bg) 0%, #030305 100% ) !important;
   color: #e6eef8;
+}
+.main .block-container {
+  padding-top: 1rem !important;
+  gap: 0 !important;
+}
+h1 {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.element-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.stMarkdown {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+div[data-testid="element-container"] {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 [data-testid="stSidebar"] {
   background: linear-gradient(180deg, #040406, var(--panel)) !important;
@@ -168,13 +188,6 @@ DEFAULT_COLUMN_MAP = {
         "lean_mass": "dexa_lean_mass_kg",
         # extra: bone_density_tscore kept as-is
     },
-    "screening_static": {
-        "member_id": "member_id",
-        "item": "item",
-        "result": "result",
-        "date": "date",
-        "next_due": "next_due",
-    },
     "interventions": {
         "member_id": "member_id",
         "date": "date",
@@ -188,9 +201,9 @@ DEFAULT_COLUMN_MAP = {
     },
     "chats": {
         "member_id": "member_id",
-        "timestamp": "datetime",
+        "timestamp": "timestamp",
         "text": "message",
-        "rule_id": "linked_intervention_id",
+        "rule_id": "linked_intervention_id", 
         "thread_id": "thread_id",
         "sender": "sender",
         "topic": "topic",
@@ -218,11 +231,61 @@ def get_column_map() -> dict:
 
 # Color coding (consistent across pages)
 ROLE_COLORS = {
-    "physician": "#2563eb",  # blue
-    "coach": "#16a34a",      # green
-    "nutritionist": "#fb923c",  # orange
-    "concierge": "#7c3aed",  # purple
+    "medical_strategist": "#2563eb",  # blue
+    "nutritionist": "#fb923c",       # orange
+    "physio": "#16a34a",            # green
+    "relationship_manager": "#7c3aed", # purple
+    "performance_analyst": "#f59e0b", # gold
+    "orchestrator": "#06d6a0",      # mint
 }
+
+# Name to role mapping
+NAME_TO_ROLE = {
+    # Member names (various formats)
+    "rahul": "member",
+    "rohan": "member", 
+    
+    # Team member names (case variations)
+    "dr.warren": "medical_strategist",
+    "dr. warren": "medical_strategist",
+    "dr warren": "medical_strategist",
+    
+    "carla": "nutritionist",
+    
+    "rachel": "physio", 
+    
+    "neel": "relationship_manager",
+    
+    "advik": "performance_analyst",
+    
+    "ruby": "orchestrator",
+}
+
+# Role display names
+ROLE_DISPLAY_NAMES = {
+    "medical_strategist": "Dr. Warren",
+    "nutritionist": "Carla", 
+    "physio": "Rachel",
+    "relationship_manager": "Neel",
+    "performance_analyst": "Advik",
+    "orchestrator": "Ruby",
+    "member": "Rohan"
+}
+
+# Individual name mappings for direct display
+INDIVIDUAL_DISPLAY_NAMES = {
+    "rohan": "Rohan",
+    "rahul": "Rahul", 
+    "dr.warren": "Dr. Warren",
+    "dr. warren": "Dr. Warren",
+    "dr warren": "Dr. Warren",
+    "carla": "Carla",
+    "rachel": "Rachel",
+    "neel": "Neel", 
+    "advik": "Advik",
+    "ruby": "Ruby",
+}
+
 EVENT_COLORS = {
     "travel": "#14b8a6",  # teal
     "illness": "#ef4444",  # red
@@ -230,6 +293,49 @@ EVENT_COLORS = {
 INTERVENTION_COLOR = "#f59e0b"  # gold
 
 DATA_DIR = os.path.join(os.getcwd(), "data")
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Helper Functions
+# ──────────────────────────────────────────────────────────────────────────────
+
+def get_sender_role_and_display(sender_name: str) -> tuple[str, str, str]:
+    """
+    Convert sender name to role, display name, and emoji.
+    Returns: (role, display_name, emoji)
+    """
+    name_lower = str(sender_name).lower().strip()
+    
+    # Map name to role using the NAME_TO_ROLE mapping
+    role = NAME_TO_ROLE.get(name_lower, "unknown")
+    
+    # Get display name - prioritize individual names, then role names
+    if name_lower in INDIVIDUAL_DISPLAY_NAMES:
+        display_name = INDIVIDUAL_DISPLAY_NAMES[name_lower]
+    elif role in ROLE_DISPLAY_NAMES:
+        display_name = ROLE_DISPLAY_NAMES[role]
+    else:
+        # Capitalize the original name as fallback
+        display_name = sender_name.title()
+    
+    # Get emoji based on role
+    if role == "member":
+        emoji = "👤"
+    elif role == "medical_strategist":
+        emoji = "👨‍⚕️"
+    elif role == "nutritionist":
+        emoji = "🥗"
+    elif role == "physio":
+        emoji = "🏃‍♀️"
+    elif role == "relationship_manager":
+        emoji = "👥"
+    elif role == "performance_analyst":
+        emoji = "📊"
+    elif role == "orchestrator":
+        emoji = "🎯"
+    else:
+        emoji = "👩‍💼"
+    
+    return role, display_name, emoji
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Utilities
@@ -326,7 +432,6 @@ def load_all() -> Dict[str, pd.DataFrame]:
     loaded["labs_quarterly"] = load(labs_name, "labs_quarterly", ["member_id", "date"])  # LDL/ApoB optional but recommended
     loaded["fitness"] = load("fitness.csv", "fitness", ["member_id", "date"])
     loaded["body_comp"] = load("body_comp.csv", "body_comp", ["member_id", "date"])
-    loaded["screening_static"] = load("screening_static.csv", "screening_static", ["member_id", "item", "result", "date", "next_due"]) 
     loaded["interventions"] = load("interventions.csv", "interventions", ["member_id", "date", "rule_id"]) 
     loaded["chats"] = load("chats.csv", "chats", ["member_id", "timestamp", "text"]) 
     loaded["kpis_monthly"] = load("kpis_monthly.csv", "kpis_monthly", ["member_id", "month"]) 
@@ -498,9 +603,12 @@ def _latest_value(df: pd.DataFrame, col: str) -> Optional[float]:
 # ──────────────────────────────────────────────────────────────────────────────
 
 def page_overview(d: Dict[str, pd.DataFrame]):
-    member_header(d["member_profile"])
-
-    # KPI Cards
+    # Header section
+    st.markdown("### 📊 Health Overview Dashboard")
+    st.markdown("---")
+    
+    # KPI Cards Section
+    st.markdown("#### 🎯 Key Health Metrics")
     c1, c2, c3, c4, c5 = st.columns(5)
 
     # Current weight trend (30-day slope)
@@ -550,9 +658,10 @@ def page_overview(d: Dict[str, pd.DataFrame]):
     with c5:
         st.metric("Adherence (30d)", adhere)
 
-    st.divider()
+    st.markdown("---")
 
     # Multi-metric trend selector
+    st.markdown("#### 📈 Health Trends Analysis")
     st.subheader("Multi‑metric trends")
     metrics = [c for c in ("RHR", "HRV", "sleep_hours") if c in d["daily"].columns]
     if metrics:
@@ -609,79 +718,25 @@ def page_overview(d: Dict[str, pd.DataFrame]):
     else:
         st.info("daily.csv needs columns: RHR, HRV, sleep_hours for this chart.")
 
-    st.divider()
-    st.subheader("📅 Timeline: Events • Interventions • Labs")
-    build_timeline(d, clickable=True)
+    st.markdown("---")
 
-
-def build_timeline(d: Dict[str, pd.DataFrame], clickable: bool=False, filters: Optional[Dict]=None, on_select_key: str="timeline_selection"):
-    # Improved timeline: stacked lanes, color-coded badges, and clickable selection
-    ev = d["events"][['date','event_type','label','intensity']].copy() if not d["events"].empty else pd.DataFrame(columns=['date','event_type','label','intensity'])
-    ev["type"] = ev["event_type"].str.lower()
-
-    iv = d["interventions"][['date','rule_id','owner']].copy() if not d["interventions"].empty else pd.DataFrame(columns=['date','rule_id','owner'])
-    iv["type"] = "intervention"
-    iv["label"] = iv["rule_id"].astype(str)
-
-    labs = d["labs_quarterly"][['date']].copy() if not d["labs_quarterly"].empty else pd.DataFrame(columns=['date'])
-    if not labs.empty:
-        labs["type"] = "lab"
-        labs["label"] = "Lab"
-
-    tl = pd.concat([
-        ev[['date','type','label','intensity']],
-        iv[['date','type','label',]],
-        labs[['date','type','label']]
-    ], ignore_index=True)
-    tl = tl.dropna(subset=["date"]).sort_values("date")
-
-    if tl.empty:
-        st.info("No timeline data available.")
-        return
-
-    # Create a lane index so items don't overlap visually
-    tl = tl.reset_index(drop=True)
-    tl['lane'] = (tl.index % 3)  # simple lane assignment for visual stacking
-
-    selection = alt.selection_single(fields=['date'], nearest=True, on='click', empty='none')
-
-    chart = alt.Chart(tl).mark_point(filled=True).encode(
-        x=alt.X('date:T', title='Date'),
-        y=alt.Y('lane:O', title=None, axis=None),
-        color=alt.Color('type:N', scale=alt.Scale(domain=['travel','illness','intervention','lab'], range=[EVENT_COLORS.get('travel'), EVENT_COLORS.get('illness'), INTERVENTION_COLOR, '#6b7280'])),
-        shape='type:N',
-        size=alt.Size('intensity:Q', legend=None, scale=alt.Scale(range=[80,300])),
-        tooltip=[alt.Tooltip('date:T', title='Date'), alt.Tooltip('type:N', title='Type'), alt.Tooltip('label:N', title='Label'), alt.Tooltip('intensity:Q', title='Intensity')],
-    ).add_selection(selection).properties(height=140)
-
-    st.altair_chart(chart, use_container_width=True)
-
-    if clickable:
-        sel = selection
-        # If selection made, show details for nearest date
-        try:
-            # fallback: let user pick from available dates
-            dates = tl['date'].sort_values().dt.date.unique()
-            selected = st.selectbox('Inspect date', options=dates)
-            if selected is not None:
-                selected_date = pd.to_datetime(selected)
-            else:
-                selected_date = pd.Timestamp.today()
-            st.session_state[on_select_key] = selected_date
-            details_panel(d, selected_date)
-        except Exception:
-            pass
-
-
-
-def details_panel(d: Dict[str, pd.DataFrame], date: pd.Timestamp):
-    st.subheader(f"📋 Details for {date.strftime('%B %d, %Y')}")
-    left, right = st.columns(2)
-
-    with left:
-        st.markdown("### 📊 Daily Metrics")
-        if not d["daily"].empty:
-            day = d["daily"].query("date == @date")
+    # Daily Metrics Inspector
+    st.markdown("#### 📅 Daily Metrics Inspector")
+    st.subheader("Select a date to view detailed metrics")
+    
+    if not d["daily"].empty:
+        # Get available dates from daily data
+        available_dates = d["daily"]["date"].dropna().sort_values().dt.date.unique()
+        if len(available_dates) > 0:
+            # Default to the most recent date
+            default_date = available_dates[-1]
+            selected_date = st.date_input("Select Date", value=default_date, min_value=available_dates[0], max_value=available_dates[-1])
+            
+            # Convert to timestamp for querying
+            selected_timestamp = pd.to_datetime(selected_date)
+            
+            # Get data for selected date
+            day = d["daily"].query("date == @selected_timestamp")
             if not day.empty:
                 # Create daily metrics table
                 day_data = day.drop(columns=["member_id", "date"]).iloc[0]
@@ -755,6 +810,20 @@ def details_panel(d: Dict[str, pd.DataFrame], date: pd.Timestamp):
                     html_table += "</table></div>"
                     
                     st.markdown(html_table, unsafe_allow_html=True)
+                else:
+                    st.markdown("""
+                    <div style="
+                        background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent-4) 100%);
+                        color: #041022;
+                        padding: 15px;
+                        border-radius: 10px;
+                        margin: 10px 0;
+                        font-weight: 600;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    ">
+                        No metrics available for this date
+                    </div>
+                    """, unsafe_allow_html=True)
             else:
                 st.markdown("""
                 <div style="
@@ -766,7 +835,7 @@ def details_panel(d: Dict[str, pd.DataFrame], date: pd.Timestamp):
                     font-weight: 600;
                     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 ">
-                    No daily data for this date
+                    No data available for this date
                 </div>
                 """, unsafe_allow_html=True)
         else:
@@ -780,25 +849,164 @@ def details_panel(d: Dict[str, pd.DataFrame], date: pd.Timestamp):
                 font-weight: 600;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             ">
-                No daily data available
+                No dates available in daily data
             </div>
             """, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+        <div style="
+            background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent-4) 100%);
+            color: #041022;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        ">
+            📁 Upload daily.csv to view daily metrics
+        </div>
+        """, unsafe_allow_html=True)
 
-        st.markdown("### 📅 Events")
-        ev = d["events"].query("date == @date") if not d["events"].empty else pd.DataFrame()
-        if not ev.empty:
-            for _, event in ev.iterrows():
-                with st.container():
-                    col1, col2 = st.columns([1, 3])
-                    with col1:
-                        event_icon = "✈️" if event.get('event_type', '').lower() == 'travel' else "🤒" if event.get('event_type', '').lower() == 'illness' else "📝"
-                        st.markdown(f"**{event_icon} {event.get('event_type', 'Event')}**")
-                    with col2:
-                        if pd.notna(event.get('label')):
-                            st.markdown(f"*{event['label']}*")
-                        if pd.notna(event.get('intensity')):
-                            st.caption(f"Intensity: {event['intensity']}")
-                    st.divider()
+
+def build_timeline(d: Dict[str, pd.DataFrame], clickable: bool=False, filters: Optional[Dict]=None, on_select_key: str="timeline_selection"):
+    # Improved timeline: stacked lanes, color-coded badges, and clickable selection
+    ev = d["events"][['date','event_type','label','intensity']].copy() if not d["events"].empty else pd.DataFrame(columns=['date','event_type','label','intensity'])
+    ev["type"] = ev["event_type"].str.lower()
+
+    iv = d["interventions"][['date','rule_id','owner']].copy() if not d["interventions"].empty else pd.DataFrame(columns=['date','rule_id','owner'])
+    iv["type"] = "intervention"
+    iv["label"] = iv["rule_id"].astype(str)
+
+    labs = d["labs_quarterly"][['date']].copy() if not d["labs_quarterly"].empty else pd.DataFrame(columns=['date'])
+    if not labs.empty:
+        labs["type"] = "lab"
+        labs["label"] = "Lab"
+
+    tl = pd.concat([
+        ev[['date','type','label','intensity']],
+        iv[['date','type','label',]],
+        labs[['date','type','label']]
+    ], ignore_index=True)
+    tl = tl.dropna(subset=["date"]).sort_values("date")
+
+    if tl.empty:
+        st.info("No timeline data available.")
+        return
+
+    # Create a lane index so items don't overlap visually
+    tl = tl.reset_index(drop=True)
+    tl['lane'] = (tl.index % 3)  # simple lane assignment for visual stacking
+
+    selection = alt.selection_single(fields=['date'], nearest=True, on='click', empty='none')
+
+    chart = alt.Chart(tl).mark_point(filled=True).encode(
+        x=alt.X('date:T', title='Date'),
+        y=alt.Y('lane:O', title=None, axis=None),
+        color=alt.Color('type:N', scale=alt.Scale(domain=['travel','illness','intervention','lab'], range=[EVENT_COLORS.get('travel'), EVENT_COLORS.get('illness'), INTERVENTION_COLOR, '#6b7280'])),
+        shape='type:N',
+        size=alt.Size('intensity:Q', legend=None, scale=alt.Scale(range=[80,300])),
+        tooltip=[alt.Tooltip('date:T', title='Date'), alt.Tooltip('type:N', title='Type'), alt.Tooltip('label:N', title='Label'), alt.Tooltip('intensity:Q', title='Intensity')],
+    ).add_selection(selection).properties(height=140)
+
+    st.altair_chart(chart, use_container_width=True)
+
+    if clickable:
+        sel = selection
+        # If selection made, show details for nearest date
+        try:
+            # fallback: let user pick from available dates
+            dates = tl['date'].sort_values().dt.date.unique()
+            selected = st.selectbox('Inspect date', options=dates)
+            if selected is not None:
+                selected_date = pd.to_datetime(selected)
+            else:
+                selected_date = pd.Timestamp.today()
+            st.session_state[on_select_key] = selected_date
+            details_panel(d, selected_date)
+        except Exception:
+            pass
+
+
+
+def details_panel(d: Dict[str, pd.DataFrame], date: pd.Timestamp):
+    st.subheader(f"📋 Daily Metrics for {date.strftime('%B %d, %Y')}")
+    
+    st.markdown("### 📊 Daily Health Metrics")
+    if not d["daily"].empty:
+        day = d["daily"].query("date == @date")
+        if not day.empty:
+            # Create daily metrics table
+            day_data = day.drop(columns=["member_id", "date"]).iloc[0]
+            daily_metrics = []
+            
+            for metric, value in day_data.items():
+                if pd.notna(value):
+                    if metric in ["RHR", "HRV", "sleep_hours", "sleep_quality", "weight", "steps", "active_minutes", "adherence"]:
+                        # Format based on metric type
+                        if metric == "RHR":
+                            daily_metrics.append(["❤️ Resting Heart Rate", f"{value:.0f} bpm", "💓"])
+                        elif metric == "HRV":
+                            daily_metrics.append(["💓 Heart Rate Variability", f"{value:.0f} ms", "📊"])
+                        elif metric == "sleep_hours":
+                            sleep_status = "🟢" if value >= 7 else "🟡" if value >= 6 else "🔴"
+                            daily_metrics.append(["😴 Sleep Hours", f"{value:.1f} hrs", sleep_status])
+                        elif metric == "sleep_quality":
+                            quality_status = "🟢" if value >= 7 else "🟡" if value >= 5 else "🔴"
+                            daily_metrics.append(["🌙 Sleep Quality", f"{value:.0f}/10", quality_status])
+                        elif metric == "weight":
+                            daily_metrics.append(["⚖️ Weight", f"{value:.1f} kg", "📏"])
+                        elif metric == "steps":
+                            steps_status = "🟢" if value >= 10000 else "🟡" if value >= 7500 else "🔴"
+                            daily_metrics.append(["👟 Steps", f"{value:,.0f}", steps_status])
+                        elif metric == "active_minutes":
+                            active_status = "🟢" if value >= 30 else "🟡" if value >= 20 else "🔴"
+                            daily_metrics.append(["🏃 Active Minutes", f"{value:.0f} min", active_status])
+                        elif metric == "adherence":
+                            adherence_status = "🟢" if value >= 80 else "🟡" if value >= 60 else "🔴"
+                            daily_metrics.append(["✅ Adherence", f"{value:.0f}%", adherence_status])
+            
+            if daily_metrics:
+                # Style the table with custom CSS
+                st.markdown("""
+                <style>
+                .daily-table {
+                    background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent-4) 100%);
+                    border-radius: 10px;
+                    padding: 15px;
+                    margin: 10px 0;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                .daily-table table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                .daily-table th, .daily-table td {
+                    padding: 8px 12px;
+                    text-align: left;
+                    border-bottom: 1px solid rgba(255,255,255,0.1);
+                }
+                .daily-table th {
+                    background-color: rgba(255,255,255,0.1);
+                    font-weight: 600;
+                    color: #041022;
+                }
+                .daily-table td {
+                    color: #041022;
+                }
+                </style>
+                """, unsafe_allow_html=True)
+                
+                # Display as HTML table
+                html_table = """
+                <div class="daily-table">
+                <table>
+                <tr><th>Metric</th><th>Value</th><th>Status</th></tr>
+                """
+                for metric, value, status in daily_metrics:
+                    html_table += f"<tr><td>{metric}</td><td>{value}</td><td>{status}</td></tr>"
+                html_table += "</table></div>"
+                
+                st.markdown(html_table, unsafe_allow_html=True)
         else:
             st.markdown("""
             <div style="
@@ -810,55 +1018,23 @@ def details_panel(d: Dict[str, pd.DataFrame], date: pd.Timestamp):
                 font-weight: 600;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             ">
-                No events for this date
+                No daily data for this date
             </div>
             """, unsafe_allow_html=True)
-
-    with right:
-        st.markdown("### 🎯 Interventions & Actions")
-        iv = d["interventions"].query("date == @date") if not d["interventions"].empty else pd.DataFrame()
-        if not iv.empty:
-            for _, intervention in iv.iterrows():
-                with st.container():
-                    st.markdown(f"**🔧 {intervention.get('rule_id', 'Rule')}**")
-                    if pd.notna(intervention.get('action')):
-                        st.markdown(f"*Action: {intervention['action']}*")
-                    if pd.notna(intervention.get('owner')):
-                        st.caption(f"👤 {intervention['owner']}")
-                    if pd.notna(intervention.get('notes')):
-                        st.markdown(f"📝 {intervention['notes']}")
-                    st.divider()
-            
-            # Related chats
-            if not d["chats"].empty and "rule_id" in d["chats"].columns:
-                rids = iv["rule_id"].dropna().unique().tolist()
-                ch = d["chats"].query("rule_id in @rids")
-                if not ch.empty:
-                    st.markdown("### 💬 Related Messages")
-                    for _, chat in ch.iterrows():
-                        with st.container():
-                            col1, col2 = st.columns([1, 3])
-                            with col1:
-                                sender_icon = "👤" if str(chat.get('sender', '')).lower() in ('member', 'client', 'you') else "👨‍⚕️"
-                                st.markdown(f"**{sender_icon} {chat.get('sender', 'Unknown')}**")
-                            with col2:
-                                st.markdown(f"*{chat.get('text', '')[:100]}{'...' if len(str(chat.get('text', ''))) > 100 else ''}*")
-                                st.caption(f"📅 {pd.to_datetime(chat['timestamp']).strftime('%H:%M')}")
-                            st.divider()
-        else:
-            st.markdown("""
-            <div style="
-                background: linear-gradient(135deg, var(--accent-3) 0%, var(--accent-2) 100%);
-                color: #041022;
-                padding: 15px;
-                border-radius: 10px;
-                margin: 10px 0;
-                font-weight: 600;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            ">
-                No interventions for this date
-            </div>
-            """, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+        <div style="
+            background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent-4) 100%);
+            color: #041022;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        ">
+            No daily data available
+        </div>
+        """, unsafe_allow_html=True)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -1155,19 +1331,17 @@ def page_trends(d: Dict[str, pd.DataFrame]):
 
     st.divider()
     st.subheader("Weekly aggregation & toggles")
-    mode = st.radio("View", ["Daily","Weekly"], horizontal=True)
-    if mode == "Weekly":
-        wk = d["weekly_from_daily"] if d["weekly_from_daily"].empty else d["weekly_from_daily"].copy()
-        if wk.empty:
-            st.info("No weekly aggregation available.")
-        else:
-            # Example: sessions breakdown
-            for cols, title in [(["cardio_sessions","strength_sessions"], "Cardio vs Strength sessions/week"),
-                                (["adherence","stress"], "Average adherence & stress")]:
-                present = [c for c in cols if c in wk.columns]
-                if present:
-                    long = wk.melt(id_vars=["week_start"], value_vars=present, var_name="metric", value_name="value").dropna()
-                    st.altair_chart(alt.Chart(long).mark_line(point=True).encode(x="week_start:T", y="value:Q", color="metric:N").properties(height=240), use_container_width=True)
+    wk = d["weekly_from_daily"] if d["weekly_from_daily"].empty else d["weekly_from_daily"].copy()
+    if wk.empty:
+        st.info("No weekly aggregation available.")
+    else:
+        # Example: sessions breakdown
+        for cols, title in [(["cardio_sessions","strength_sessions"], "Cardio vs Strength sessions/week"),
+                            (["adherence","stress"], "Average adherence & stress")]:
+            present = [c for c in cols if c in wk.columns]
+            if present:
+                long = wk.melt(id_vars=["week_start"], value_vars=present, var_name="metric", value_name="value").dropna()
+                st.altair_chart(alt.Chart(long).mark_line(point=True).encode(x="week_start:T", y="value:Q", color="metric:N").properties(height=240), use_container_width=True)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -1346,20 +1520,6 @@ def page_fitness(d: Dict[str, pd.DataFrame]):
             long = b.melt(id_vars=["date"], value_vars=present, var_name="metric", value_name="value").dropna()
             st.altair_chart(alt.Chart(long).mark_line(point=True).encode(x="date:T", y="value:Q", color="metric:N"), use_container_width=True)
 
-    # Insights box (simple heuristic summary)
-    st.subheader("Insights")
-    insight = []
-    if not f.empty and "VO2max" in f.columns and f["VO2max"].notna().sum() >= 2:
-        f2 = f.dropna(subset=["VO2max"]).sort_values("date")
-        delta = f2["VO2max"].iloc[-1] - f2["VO2max"].iloc[0]
-        weeks = max(1, (f2["date"].iloc[-1] - f2["date"].iloc[0]).days/7)
-        insight.append(f"VO₂max {delta:+.1f} over {weeks:.0f} weeks")
-    if not f.empty and {"cardio_sessions","date"}.issubset(f.columns):
-        avg_cardio = f["cardio_sessions"].tail(12).mean()
-        if not np.isnan(avg_cardio):
-            insight.append(f"~{avg_cardio:.1f} cardio sessions/week recently")
-    st.info("; ".join(insight) if insight else "Add more fitness/body comp data to unlock insights.")
-
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Interventions & Rationale
@@ -1471,58 +1631,65 @@ def page_interventions(d: Dict[str, pd.DataFrame]):
     st.divider()
     st.subheader("Why chain")
     rid = st.selectbox("Pick rule_id", options=iv["rule_id"].dropna().unique())
-    row = iv.query("rule_id == @rid").sort_values("date").iloc[-1]
-    st.write(row)
+    if rid:
+        query_result = iv.query("rule_id == @rid").sort_values("date")
+        if not query_result.empty:
+            row = query_result.iloc[-1]
+            st.write(row)
 
-    # Trigger metric trend before intervention
-    trig = row.get("trigger_metric")
-    trig_val = row.get("trigger_value")
-    if pd.notna(trig) and trig in d["daily"].columns:
-        df = d["daily"][['date', trig]].dropna().sort_values("date")
-        # window: 60d before intervention
-        t0 = pd.to_datetime(row["date"]) - pd.Timedelta(days=60)
-        dfw = df.query("date >= @t0 and date <= @row.date")
-        line = alt.Chart(dfw).mark_line().encode(x="date:T", y=alt.Y(f"{trig}:Q", title=trig))
-        if pd.notna(trig_val):
-            thr = alt.Chart(pd.DataFrame({"y":[trig_val]})).mark_rule(strokeDash=[4,4]).encode(y="y:Q")
-            chart = alt.layer(line.properties(height=260), thr)
-            st.altair_chart(chart, use_container_width=True) # type: ignore
+            # Trigger metric trend before intervention
+            trig = row.get("trigger_metric")
+            trig_val = row.get("trigger_value")
+            if pd.notna(trig) and trig in d["daily"].columns:
+                df = d["daily"][['date', trig]].dropna().sort_values("date")
+                # window: 60d before intervention
+                t0 = pd.to_datetime(row["date"]) - pd.Timedelta(days=60)
+                dfw = df.query("date >= @t0 and date <= @row.date")
+                line = alt.Chart(dfw).mark_line().encode(x="date:T", y=alt.Y(f"{trig}:Q", title=trig))
+                if pd.notna(trig_val):
+                    thr = alt.Chart(pd.DataFrame({"y":[trig_val]})).mark_rule(strokeDash=[4,4]).encode(y="y:Q")
+                    chart = alt.layer(line.properties(height=260), thr)
+                    st.altair_chart(chart, use_container_width=True) # type: ignore
+                else:
+                    st.altair_chart(line.properties(height=260), use_container_width=True)
+            else:
+                st.info("Trigger metric not found in daily.csv")
+
+            # Related chats
+            if not d["chats"].empty and "rule_id" in d["chats"].columns:
+                ch = d["chats"].query("rule_id == @rid")
+                st.subheader("Related chats")
+                st.dataframe(ch)
+
+            # Post-intervention changes (HRV 7‑day avg)
+            if not d["daily"].empty and "HRV" in d["daily"].columns:
+                df = d["daily"][['date','HRV']].dropna().sort_values("date")
+                df["HRV_ma7"] = df["HRV"].rolling(7, min_periods=1).mean()
+                t0 = pd.to_datetime(row["date"]) - pd.Timedelta(days=30)
+                t1 = pd.to_datetime(row["date"]) + pd.Timedelta(days=30)
+                win = df.query("date >= @t0 and date <= @t1")
+                mark = alt.Chart(pd.DataFrame({"date":[pd.to_datetime(row["date"])]})).mark_rule(color=INTERVENTION_COLOR)
+                st.subheader("HRV 7‑day average around intervention")
+                chart = alt.layer(alt.Chart(win).mark_line().encode(x="date:T", y="HRV_ma7:Q"), mark.encode(x="date:T"))
+                st.altair_chart(chart, use_container_width=True)  # type: ignore
+
+            # Export bundle (CSV subset + rationale markdown)
+            st.divider()
+            if st.button("Export Audit Bundle (.zip)"):
+                buf = io.BytesIO()
+                import zipfile
+                with zipfile.ZipFile(buf, 'w') as z:
+                    # Minimal bundle
+                    z.writestr('intervention_row.csv', iv.query("rule_id == @rid").to_csv(index=False))
+                    if not d["chats"].empty:
+                        z.writestr('related_chats.csv', d["chats"].query("rule_id == @rid").to_csv(index=False))
+                    md = f"""# Audit — {rid}\n\n**Trigger:** {trig} → threshold {trig_val}\n\n**Date:** {row['date']}\n\n**Owner:** {row.get('owner','—')}\n\n**Action:** {row.get('action','—')}\n\n"""
+                    z.writestr('rationale.md', md)
+                st.download_button("Download Bundle", data=buf.getvalue(), file_name=f"audit_{rid}.zip", mime="application/zip")
         else:
-            st.altair_chart(line.properties(height=260), use_container_width=True)
+            st.warning(f"No interventions found for rule_id: {rid}")
     else:
-        st.info("Trigger metric not found in daily.csv")
-
-    # Related chats
-    if not d["chats"].empty and "rule_id" in d["chats"].columns:
-        ch = d["chats"].query("rule_id == @rid")
-        st.subheader("Related chats")
-        st.dataframe(ch)
-
-    # Post-intervention changes (HRV 7‑day avg)
-    if not d["daily"].empty and "HRV" in d["daily"].columns:
-        df = d["daily"][['date','HRV']].dropna().sort_values("date")
-        df["HRV_ma7"] = df["HRV"].rolling(7, min_periods=1).mean()
-        t0 = pd.to_datetime(row["date"]) - pd.Timedelta(days=30)
-        t1 = pd.to_datetime(row["date"]) + pd.Timedelta(days=30)
-        win = df.query("date >= @t0 and date <= @t1")
-        mark = alt.Chart(pd.DataFrame({"date":[pd.to_datetime(row["date"])]})).mark_rule(color=INTERVENTION_COLOR)
-        st.subheader("HRV 7‑day average around intervention")
-        chart = alt.layer(alt.Chart(win).mark_line().encode(x="date:T", y="HRV_ma7:Q"), mark.encode(x="date:T"))
-        st.altair_chart(chart, use_container_width=True)  # type: ignore
-
-    # Export bundle (CSV subset + rationale markdown)
-    st.divider()
-    if st.button("Export Audit Bundle (.zip)"):
-        buf = io.BytesIO()
-        import zipfile
-        with zipfile.ZipFile(buf, 'w') as z:
-            # Minimal bundle
-            z.writestr('intervention_row.csv', iv.query("rule_id == @rid").to_csv(index=False))
-            if not d["chats"].empty:
-                z.writestr('related_chats.csv', d["chats"].query("rule_id == @rid").to_csv(index=False))
-            md = f"""# Audit — {rid}\n\n**Trigger:** {trig} → threshold {trig_val}\n\n**Date:** {row['date']}\n\n**Owner:** {row.get('owner','—')}\n\n**Action:** {row.get('action','—')}\n\n"""
-            z.writestr('rationale.md', md)
-        st.download_button("Download Bundle", data=buf.getvalue(), file_name=f"audit_{rid}.zip", mime="application/zip")
+        st.info("Please select a rule_id to view details")
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -1530,180 +1697,513 @@ def page_interventions(d: Dict[str, pd.DataFrame]):
 # ──────────────────────────────────────────────────────────────────────────────
 
 def page_chats(d: Dict[str, pd.DataFrame]):
-    st.subheader("💬 Communication Hub")
+    st.subheader("💬 Chats")
+    
+    # Enhanced WhatsApp-style CSS with overflow scrolling
+    st.markdown("""
+    <style>
+    .whatsapp-container {
+        background: linear-gradient(135deg, #0c1420 0%, #1a1f2e 100%);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 10px 0;
+        height: 600px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    .chat-header {
+        background: linear-gradient(135deg, #00FF6A 0%, #00D1FF 100%);
+        color: #041022;
+        padding: 15px 20px;
+        border-radius: 12px 12px 0 0;
+        margin: -20px -20px 10px -20px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .chat-messages-container {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px 5px;
+        margin: 0 -10px;
+        scrollbar-width: thin;
+        scrollbar-color: #00FF6A #1a1f2e;
+    }
+    
+    .chat-messages-container::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .chat-messages-container::-webkit-scrollbar-track {
+        background: #1a1f2e;
+        border-radius: 3px;
+    }
+    
+    .chat-messages-container::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #00FF6A, #00D1FF);
+        border-radius: 3px;
+    }
+    
+    .chat-messages-container::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #00D1FF, #00FF6A);
+    }
+    
+    .chat-message-member {
+        background: linear-gradient(135deg, #00FF6A, #00D1FF);
+        color: #041022;
+        padding: 12px 16px;
+        border-radius: 18px;
+        border-bottom-right-radius: 4px;
+        margin: 8px 0 8px auto;
+        max-width: 70%;
+        box-shadow: 0 2px 8px rgba(0, 255, 106, 0.2);
+        animation: slideInRight 0.3s ease-out;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .chat-message-provider {
+        background: #2a3441;
+        color: #e6eef8;
+        padding: 12px 16px;
+        border-radius: 18px;
+        border-bottom-left-radius: 4px;
+        margin: 8px auto 8px 0;
+        max-width: 70%;
+        border: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 2px 8px rgba(42, 52, 65, 0.3);
+        animation: slideInLeft 0.3s ease-out;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    @keyframes slideInRight {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes slideInLeft {
+        from { transform: translateX(-100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    
+    .chat-date-divider {
+        text-align: center;
+        margin: 20px 0;
+        padding: 8px 16px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        color: #9ca3af;
+        font-size: 12px;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .sender-info {
+        font-size: 11px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        opacity: 0.9;
+    }
+    
+    .message-text {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 4px;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .message-text strong {
+        font-weight: 700;
+    }
+    
+    .message-text em {
+        font-style: italic;
+    }
+    
+    .message-time {
+        font-size: 10px;
+        opacity: 0.7;
+        text-align: right;
+        margin-top: 4px;
+    }
+    
+    .online-indicator {
+        width: 8px;
+        height: 8px;
+        background: #00FF6A;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 10px;
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+    
+    .message-count-badge {
+        background: #ff4757;
+        color: white;
+        border-radius: 12px;
+        padding: 4px 8px;
+        font-size: 11px;
+        font-weight: 600;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
     ch = d["chats"].copy()
     if ch.empty:
         st.markdown("""
-        <div style="
-            background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent-4) 100%);
-            color: #041022;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 10px 0;
-            font-weight: 600;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        ">
-            📁 Upload chats.csv to view communication history
+        <div class="whatsapp-container">
+            <div class="chat-header">
+                💬 No Messages Yet
+                <span class="online-indicator"></span>
+            </div>
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: #9ca3af;">
+                <div style="text-align: center;">
+                    <div style="font-size: 48px; margin-bottom: 20px;">📱</div>
+                    <div style="font-size: 18px; margin-bottom: 10px;">Welcome to Chat</div>
+                    <div style="font-size: 14px; opacity: 0.7;">Upload chats.csv or send your first message below</div>
+                </div>
+            </div>
         </div>
         """, unsafe_allow_html=True)
         return
 
+    # Use 'datetime' column instead of 'timestamp' based on the CSV structure
+    timestamp_col = 'datetime' if 'datetime' in ch.columns else 'timestamp'
+    text_col = 'message' if 'message' in ch.columns else 'text'
+    
     # Normalize timestamp and sort
-    ch['timestamp'] = pd.to_datetime(ch['timestamp'], errors='coerce')
-    ch = ch.sort_values('timestamp')
-
-    # Filters
-    if 'tag' in ch.columns:
-        tags = sorted([t for t in ch['tag'].dropna().unique().tolist() if t != ''])
-        chosen = st.multiselect('Filter by tag', options=tags, default=tags)
-        if chosen:
-            ch = ch[ch['tag'].isin(chosen)]
-
-    mode = st.radio('Group by', ['Week','Topic'], horizontal=True)
-    if mode == 'Week':
-        ch['week_start'] = pd.to_datetime(ch['timestamp']).dt.to_period('W').apply(lambda r: r.start_time)
-        weeks = sorted(ch['week_start'].unique())
-        wk = st.selectbox('Week', options=weeks)
-        df = ch.query('week_start == @wk')
-    else:
-        if 'topic' in ch.columns:
-            topics = sorted(ch['topic'].dropna().unique().tolist())
-            topic = st.selectbox('Topic', options=topics)
-            df = ch.query('topic == @topic')
-        else:
-            st.info("No 'topic' column; showing all chats.")
-            df = ch
-
-    left, mid, right = st.columns([2,5,3])
-
-    with left:
-        st.markdown("### 💬 Threads")
-        if 'thread_id' in df.columns:
-            threads = df.groupby('thread_id')['timestamp'].max().sort_values(ascending=False).index.tolist()
-            tid = st.selectbox('Select Thread', options=threads)
-            thread = df.query('thread_id == @tid').sort_values('timestamp')
-        else:
-            tid = None
-            thread = df
-        
-        # Show thread summary instead of raw dataframe
-        st.markdown("#### 📋 Thread Summary")
-        if 'thread_id' in df.columns:
-            thread_summary = df.groupby('thread_id').agg({
-                'timestamp': ['min', 'max', 'count'],
-                'sender': 'nunique'
-            }).reset_index()
-            thread_summary.columns = ['Thread ID', 'First Message', 'Last Message', 'Message Count', 'Participants']
+    ch[timestamp_col] = pd.to_datetime(ch[timestamp_col], errors='coerce')
+    ch = ch.sort_values(timestamp_col)
+    
+    # Add any new messages from session state
+    if 'new_messages' in st.session_state and st.session_state.new_messages:
+        new_messages_df = pd.DataFrame(st.session_state.new_messages)
+        if not new_messages_df.empty:
+            # Ensure column consistency
+            for col in ch.columns:
+                if col not in new_messages_df.columns:
+                    new_messages_df[col] = ""
             
-            for _, row in thread_summary.head(5).iterrows():
-                with st.container():
+            # Convert timestamp
+            new_messages_df[timestamp_col] = pd.to_datetime(new_messages_df['datetime'], errors='coerce')
+            
+            # Append new messages
+            ch = pd.concat([ch, new_messages_df], ignore_index=True)
+            ch = ch.sort_values(timestamp_col)
+
+    # Enhanced filters row with all available filters
+    st.markdown("#### 🔍 Chat Filters")
+    col1, col2, col3, col4, col5 = st.columns([2, 2, 2, 1.5, 1])
+    
+    with col1:
+        if 'tags' in ch.columns:
+            tags = sorted([t for t in ch['tags'].dropna().unique().tolist() if t != ''])
+            chosen_tags = st.multiselect('🏷️ Tags', options=tags, default=tags, key="tags_filter")
+            if chosen_tags:
+                ch = ch[ch['tags'].isin(chosen_tags)]
+    
+    with col2:
+        senders = sorted([s for s in ch['sender'].dropna().unique().tolist() if s != ''])
+        chosen_senders = st.multiselect('👤 Senders', options=senders, default=senders, key="senders_filter")
+        if chosen_senders:
+            ch = ch[ch['sender'].isin(chosen_senders)]
+    
+    with col3:
+        # Date range filter
+        if not ch.empty:
+            min_date = ch[timestamp_col].min().date()
+            max_date = ch[timestamp_col].max().date()
+            date_range = st.date_input(
+                "📅 Date range",
+                value=(min_date, max_date),
+                min_value=min_date,
+                max_value=max_date,
+                key="date_filter"
+            )
+            if len(date_range) == 2:
+                start_date, end_date = date_range
+                ch = ch[
+                    (ch[timestamp_col].dt.date >= start_date) & 
+                    (ch[timestamp_col].dt.date <= end_date)
+                ]
+    
+    with col4:
+        # Filter by topic/thread
+        if 'topic' in ch.columns:
+            topics = sorted([t for t in ch['topic'].dropna().unique().tolist() if t != ''])
+            if topics:
+                chosen_topic = st.selectbox('📋 Topic', options=['All'] + topics, index=0, key="topic_filter")
+                if chosen_topic != 'All':
+                    ch = ch[ch['topic'] == chosen_topic]
+    
+    with col5:
+        total_messages = len(ch)
+        st.metric("💬", total_messages)
+    
+    # Additional filter row for more specific filters
+    if 'linked_intervention_id' in ch.columns or 'thread_id' in ch.columns:
+        col1, col2, col3 = st.columns([2, 2, 2])
+        
+        with col1:
+            # Filter by linked interventions
+            if 'linked_intervention_id' in ch.columns:
+                interventions = sorted([i for i in ch['linked_intervention_id'].dropna().unique().tolist() if i != ''])
+                if interventions:
+                    chosen_intervention = st.selectbox('🎯 Linked Intervention', options=['All'] + interventions, index=0, key="intervention_filter")
+                    if chosen_intervention != 'All':
+                        ch = ch[ch['linked_intervention_id'] == chosen_intervention]
+        
+        with col2:
+            # Filter by thread
+            if 'thread_id' in ch.columns:
+                threads = sorted([t for t in ch['thread_id'].dropna().unique().tolist() if t != ''])
+                if threads:
+                    chosen_thread = st.selectbox('🧵 Thread', options=['All'] + threads, index=0, key="thread_filter")
+                    if chosen_thread != 'All':
+                        ch = ch[ch['thread_id'] == chosen_thread]
+        
+        with col3:
+            # Role filter
+            roles = []
+            for sender in ch['sender'].dropna().unique():
+                role, _, _ = get_sender_role_and_display(sender)
+                if role not in roles:
+                    roles.append(role)
+            
+            if roles:
+                chosen_role = st.selectbox('👥 Role Filter', options=['All'] + sorted(roles), index=0, key="role_filter")
+                if chosen_role != 'All':
+                    # Filter messages by role
+                    filtered_senders = []
+                    for sender in ch['sender'].dropna().unique():
+                        role, _, _ = get_sender_role_and_display(sender)
+                        if role == chosen_role:
+                            filtered_senders.append(sender)
+                    if filtered_senders:
+                        ch = ch[ch['sender'].isin(filtered_senders)]
+
+    # WhatsApp-style chat container using native Streamlit components
+    if not ch.empty:
+        # Create the chat header with participants info
+        unique_senders = list(ch['sender'].dropna().unique())
+        participants_text = ", ".join(unique_senders[:3])
+        if len(unique_senders) > 3:
+            participants_text += f" +{len(unique_senders)-3} more"
+        
+        # Display chat header
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.markdown(f"""
+            <div style="
+                background: linear-gradient(135deg, #00FF6A 0%, #00D1FF 100%);
+                color: #041022;
+                padding: 15px 20px;
+                border-radius: 12px;
+                margin: 10px 0;
+                font-weight: 600;
+                text-align: center;
+            ">
+                <div style="font-size: 18px;">💬 Health Chat ({total_messages} messages)</div>
+                <div style="font-size: 12px; opacity: 0.8;">{participants_text}</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col2:
+            # Message limit selector
+            message_limit_options = [100, 200, 500, 1000, "All"]
+            selected_limit = st.selectbox(
+                "Show messages:",
+                options=message_limit_options,
+                index=2,  # Default to 500
+                key="message_limit"
+            )
+        
+        # Use st.container with height to create scrollable area
+        container = st.container(height=600)
+        
+        with container:
+            # Process messages with date dividers
+            current_date = None
+            
+            # Apply message limit
+            if selected_limit == "All":
+                recent_messages = ch.sort_values(timestamp_col)
+            else:
+                recent_messages = ch.tail(int(selected_limit))
+            
+            for _, row in recent_messages.iterrows():
+                msg_date = pd.to_datetime(row[timestamp_col]).date()
+                
+                # Add date divider if date changed
+                if current_date != msg_date:
+                    current_date = msg_date
+                    if msg_date == pd.Timestamp.today().date():
+                        formatted_date = "Today"
+                    elif msg_date == (pd.Timestamp.today() - pd.Timedelta(days=1)).date():
+                        formatted_date = "Yesterday"
+                    else:
+                        formatted_date = msg_date.strftime('%B %d, %Y')
+                    
+                    # Date divider using centered text
+                    st.markdown(f"""
+                    <div style="text-align: center; margin: 20px 0; color: #9ca3af; font-size: 12px; 
+                                background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 15px; 
+                                display: inline-block; margin-left: 50%%; transform: translateX(-50%%);">
+                        {formatted_date}
+                    </div>
+                    """, unsafe_allow_html=True)
+                
+                # Determine if message is from member or provider
+                sender_name = str(row.get('sender', 'Unknown'))
+                role, display_name, sender_emoji = get_sender_role_and_display(sender_name)
+                is_member = role == "member"
+                
+                # Get message content
+                message_text = str(row.get(text_col, ''))
+                message_text = message_text.strip()
+                timestamp = pd.to_datetime(row[timestamp_col])
+                time_str = timestamp.strftime('%H:%M')
+                
+                # Create columns for message alignment
+                if is_member:
+                    # Member message (right aligned with green gradient)
+                    col1, col2 = st.columns([1, 2])
+                    with col2:
+                        st.markdown(f"""
+                        <div style="
+                            background: linear-gradient(135deg, #00FF6A, #00D1FF);
+                            color: #041022;
+                            padding: 12px 16px;
+                            border-radius: 18px;
+                            border-bottom-right-radius: 4px;
+                            margin: 8px 0;
+                            margin-left: auto;
+                            box-shadow: 0 2px 8px rgba(0, 255, 106, 0.2);
+                            word-wrap: break-word;
+                            max-width: 100%;
+                            display: block;
+                            text-align: left;
+                        ">
+                            <div style="font-size: 11px; font-weight: 600; margin-bottom: 4px;">
+                                {sender_emoji} {display_name}
+                            </div>
+                            <div style="font-size: 14px; line-height: 1.5; margin-bottom: 4px;">
+                                {message_text}
+                            </div>
+                            <div style="font-size: 10px; opacity: 0.7; text-align: right;">
+                                {time_str}
+                            </div>
+                        </div>
+                        """, unsafe_allow_html=True)
+                else:
+                    # Provider message (left aligned with role-based color)
                     col1, col2 = st.columns([2, 1])
                     with col1:
-                        st.markdown(f"**Thread {row['Thread ID'][:8]}...**")
-                        st.caption(f"📅 {row['First Message'].strftime('%m/%d')} - {row['Last Message'].strftime('%m/%d')}")
-                    with col2:
-                        st.markdown(f"💬 {row['Message Count']}")
-                        st.caption(f"👥 {row['Participants']}")
-                    st.divider()
-        else:
-            st.markdown("""
-            <div style="
-                background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent-4) 100%);
-                color: #041022;
-                padding: 15px;
-                border-radius: 10px;
-                margin: 10px 0;
-                font-weight: 600;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            ">
-                No thread information available
-            </div>
-            """, unsafe_allow_html=True)
-
-    with mid:
-        st.markdown("### 💬 Messages")
-        if not thread.empty:
-            for _, r in thread.iterrows():
-                side = 'member' if str(r.get('sender','')).lower() in ('member','client','you') else 'provider'
-                bubble_color = 'linear-gradient(90deg,var(--accent-1),var(--accent-2))' if side=='member' else 'rgba(255,255,255,0.04)'
-                align = 'right' if side=='member' else 'left'
-                
-                # Enhanced chat bubble with better styling
-                st.markdown(f"""
-                <div style='display:flex; justify-content:{'flex-end' if align=='right' else 'flex-start'}; padding:8px; margin:4px 0;'>
-                    <div style='
-                        max-width:75%; 
-                        background:{bubble_color}; 
-                        padding:12px 16px; 
-                        border-radius:18px; 
-                        color:#061018;
-                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                        position: relative;
-                    '>
-                        <div style='font-weight:600; font-size:0.9em; margin-bottom:4px;'>
-                            {r.get('sender','Unknown')}
+                        # Get role-specific color
+                        role_color = ROLE_COLORS.get(role, "#2a3441")
+                        
+                        st.markdown(f"""
+                        <div style="
+                            background: {role_color};
+                            color: #ffffff;
+                            padding: 12px 16px;
+                            border-radius: 18px;
+                            border-bottom-left-radius: 4px;
+                            margin: 8px 0;
+                            border: 1px solid rgba(255,255,255,0.1);
+                            box-shadow: 0 2px 8px rgba(42, 52, 65, 0.3);
+                            word-wrap: break-word;
+                            max-width: 100%;
+                            display: block;
+                        ">
+                            <div style="font-size: 11px; font-weight: 600; margin-bottom: 4px;">
+                                {sender_emoji} {display_name}
+                            </div>
+                            <div style="font-size: 14px; line-height: 1.5; margin-bottom: 4px;">
+                                {message_text}
+                            </div>
+                            <div style="font-size: 10px; opacity: 0.7; text-align: right;">
+                                {time_str}
+                            </div>
                         </div>
-                        <div style='font-size:0.95em; line-height:1.4;'>
-                            {r.get('text','')}
-                        </div>
-                        <div style='font-size:0.75em; color:#9ca3af; margin-top:6px; text-align:right;'>
-                            {pd.to_datetime(r['timestamp']).strftime('%m/%d %H:%M')}
-                        </div>
-                    </div>
-                </div>
-                """, unsafe_allow_html=True)
-        else:
-            st.markdown("""
-            <div style="
-                background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent-4) 100%);
-                color: #041022;
-                padding: 15px;
-                border-radius: 10px;
-                margin: 10px 0;
-                font-weight: 600;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            ">
-                No messages in this thread
-            </div>
-            """, unsafe_allow_html=True)
-
-    with right:
-        st.markdown("### 📊 Context")
-        if not d['daily'].empty and not thread.empty:
-            tmin, tmax = thread['timestamp'].min(), thread['timestamp'].max()
-            tmin = pd.to_datetime(tmin) - pd.Timedelta(days=3)
-            tmax = pd.to_datetime(tmax) + pd.Timedelta(days=3)
-            snap = d['daily'].query('date >= @tmin and date <= @tmax')
-            
-            if not snap.empty:
-                st.markdown("#### 📈 Health Snapshot")
-                latest_snap = snap.tail(1).iloc[0] if not snap.empty else None
-                if latest_snap is not None:
-                    col1, col2 = st.columns(2)
-                    with col1:
-                        if pd.notna(latest_snap.get('RHR')):
-                            st.metric("❤️ RHR", f"{latest_snap['RHR']:.0f} bpm")
-                        if pd.notna(latest_snap.get('HRV')):
-                            st.metric("💓 HRV", f"{latest_snap['HRV']:.0f} ms")
-                    with col2:
-                        if pd.notna(latest_snap.get('sleep_hours')):
-                            st.metric("😴 Sleep", f"{latest_snap['sleep_hours']:.1f} hrs")
-                        if pd.notna(latest_snap.get('adherence')):
-                            st.metric("✅ Adherence", f"{latest_snap['adherence']:.0f}%")
+                        """, unsafe_allow_html=True)
         
-        if 'rule_id' in thread.columns:
-            rids = [x for x in thread['rule_id'].dropna().unique().tolist() if x != '']
-            if rids and not d['interventions'].empty:
-                st.markdown("#### 🎯 Related Interventions")
-                related_interventions = d['interventions'].query('rule_id in @rids')
-                if not related_interventions.empty:
-                    for _, intervention in related_interventions.iterrows():
-                        with st.container():
-                            st.markdown(f"**🔧 {intervention.get('rule_id', 'Rule')}**")
-                            if pd.notna(intervention.get('action')):
-                                st.markdown(f"*{intervention['action']}*")
-                            st.caption(f"📅 {intervention['date'].strftime('%Y-%m-%d')}")
-                            st.divider()
+        # Show info if messages were truncated
+        if selected_limit != "All" and len(ch) > int(selected_limit):
+            st.info(f"💡 Showing recent {selected_limit} messages. Total: {len(ch)} messages. Select 'All' to see all messages or use filters for specific conversations.")
+        
+    else:
+        st.markdown("""
+        <div class="whatsapp-container">
+            <div class="chat-header">
+                💬 No Messages Found
+                <span class="online-indicator"></span>
+            </div>
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center; color: #9ca3af;">
+                <div style="text-align: center;">
+                    <div style="font-size: 36px; margin-bottom: 15px;">🔍</div>
+                    <div style="font-size: 16px;">No messages match your filters</div>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Chat statistics in expander
+    with st.expander("📊 Chat Statistics", expanded=False):
+        if not ch.empty:
+            col1, col2, col3, col4 = st.columns(4)
+            
+            with col1:
+                st.metric("📱 Total Messages", len(ch))
+            
+            with col3:
+                if not ch.empty:
+                    date_range_days = (ch[timestamp_col].max() - ch[timestamp_col].min()).days + 1
+                    st.metric("📅 Date Range", f"{date_range_days} days")
+            
+            with col4:
+                if 'linked_intervention_id' in ch.columns:
+                    linked_interventions = ch['linked_intervention_id'].dropna().nunique()
+                    st.metric("🎯 Linked Actions", linked_interventions)
+            
+            # Recent activity chart
+            if len(ch) > 1:
+                daily_counts = ch.groupby(ch[timestamp_col].dt.date).size().reset_index()
+                daily_counts.columns = ['date', 'message_count']
+                daily_counts = daily_counts.tail(14)  # Last 14 days
+                
+                if not daily_counts.empty and len(daily_counts) > 1:
+                    chart = alt.Chart(daily_counts).mark_bar(color='#00FF6A').encode(
+                        x=alt.X('date:T', title='Date'),
+                        y=alt.Y('message_count:Q', title='Messages'),
+                        tooltip=['date:T', 'message_count:Q']
+                    ).properties(height=200, title="Daily Message Activity")
+                    
+                    st.altair_chart(chart, use_container_width=True)
+
+        
+        with col2:
+            unique_senders = ch['sender'].nunique()
+            st.metric("� Participants", unique_senders)
+
+
+
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -1798,6 +2298,12 @@ def page_kpis(d: Dict[str, pd.DataFrame]):
         st.subheader("📈 Monthly Performance History")
         if not km.empty:
             display_kpis = km.sort_values("month", ascending=False).copy()
+            
+            # Ensure month column is datetime
+            if not pd.api.types.is_datetime64_any_dtype(display_kpis['month']):
+                display_kpis['month'] = pd.to_datetime(display_kpis['month'], errors='coerce')
+            
+            # Format month for display
             display_kpis['month'] = display_kpis['month'].dt.strftime('%Y-%m')
             
             # Select key metrics for display
@@ -1832,158 +2338,9 @@ def page_kpis(d: Dict[str, pd.DataFrame]):
             long = km.melt(id_vars=["month"], value_vars=["LDL_delta","VO2max_delta"], var_name="metric", value_name="value").dropna()
             st.altair_chart(alt.Chart(long).mark_bar().encode(x="month:T", y="value:Q", color="metric:N").properties(height=220), use_container_width=True)
 
-    st.divider()
-    st.subheader("Generate monthly report")
-    if not km.empty:
-        mon = st.selectbox("Month", options=km.sort_values("month")["month"].dt.date.unique())
-        if mon is not None:
-            selected_month = pd.to_datetime(mon)
-        else:
-            selected_month = pd.Timestamp.today()
-        row = km.query("month == @selected_month").iloc[0]
-        md = f"""# Monthly Report — {mon}\n\n- **Adherence:** {row.get('adherence','—')}\n- **Sessions:** {row.get('sessions','—')}\n- **LDL Δ:** {row.get('LDL_delta','—')}\n- **VO₂max Δ:** {row.get('VO2max_delta','—')}\n\n## Notes\nAdd narrative here.\n"""
-        st.download_button("Download Markdown", data=md.encode('utf-8'), file_name=f"report_{mon}.md", mime="text/markdown")
-
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Screening Page
-# ──────────────────────────────────────────────────────────────────────────────
-
-def page_screening(d: Dict[str, pd.DataFrame]):
-    st.subheader("🔍 Screening & Prevention Checklist")
-    s = d["screening_static"].copy()
-    if s.empty:
-        st.markdown("""
-        <div style="
-            background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent-3) 100%);
-            color: #041022;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 10px 0;
-            font-weight: 600;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        ">
-            📁 Upload screening_static.csv to view screening schedule
-        </div>
-        """, unsafe_allow_html=True)
-        return
-    
-    # Summary metrics table
-    today = pd.Timestamp.today().normalize()
-    s["overdue"] = pd.to_datetime(s["next_due"], errors='coerce') < today
-    s["due_soon"] = (pd.to_datetime(s["next_due"], errors='coerce') >= today) & (pd.to_datetime(s["next_due"], errors='coerce') <= today + pd.Timedelta(days=30))
-    
-    total_screenings = len(s)
-    overdue_count = s["overdue"].sum()
-    due_soon_count = s["due_soon"].sum()
-    completed_count = total_screenings - overdue_count - due_soon_count
-    
-    # Create screening metrics table
-    screening_metrics = [
-        ["Total Screenings", total_screenings, "📋"],
-        ["Overdue", overdue_count, "⚠️" if overdue_count > 0 else "✅"],
-        ["Due Soon (30d)", due_soon_count, "⏰" if due_soon_count > 0 else "✅"],
-        ["Up to Date", completed_count, "✅"]
-    ]
-    
-    st.markdown("#### 📊 Screening Summary")
-    
-    # Style the table with custom CSS
-    st.markdown("""
-    <style>
-    .screening-table {
-        background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent-3) 100%);
-        border-radius: 10px;
-        padding: 15px;
-        margin: 10px 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .screening-table table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-    .screening-table th, .screening-table td {
-        padding: 8px 12px;
-        text-align: left;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .screening-table th {
-        background-color: rgba(255,255,255,0.1);
-        font-weight: 600;
-        color: #041022;
-    }
-    .screening-table td {
-        color: #041022;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-    
-    # Display as HTML table
-    html_table = """
-    <div class="screening-table">
-    <table>
-    <tr><th>Metric</th><th>Value</th><th>Status</th></tr>
-    """
-    for metric, value, status in screening_metrics:
-        html_table += f"<tr><td>{metric}</td><td>{value}</td><td>{status}</td></tr>"
-    html_table += "</table></div>"
-    
-    st.markdown(html_table, unsafe_allow_html=True)
-    
-    st.divider()
-    
-    # Screening items with better formatting
-    st.subheader("📋 Screening Items")
-    
-    # Overdue items first
-    overdue_items = s[s["overdue"]].sort_values("next_due")
-    if not overdue_items.empty:
-        st.markdown("### ⚠️ **Overdue Items**")
-        for _, item in overdue_items.iterrows():
-            with st.container():
-                col1, col2, col3 = st.columns([2, 2, 1])
-                with col1:
-                    st.markdown(f"**{item['item']}**")
-                with col2:
-                    if pd.notna(item['result']):
-                        st.markdown(f"Last: {item['result']}")
-                with col3:
-                    st.markdown(f"**Due:** {item['next_due'].strftime('%Y-%m-%d')}")
-                st.divider()
-    
-    # Due soon items
-    due_soon_items = s[s["due_soon"]].sort_values("next_due")
-    if not due_soon_items.empty:
-        st.markdown("### ⏰ **Due Soon**")
-        for _, item in due_soon_items.iterrows():
-            with st.container():
-                col1, col2, col3 = st.columns([2, 2, 1])
-                with col1:
-                    st.markdown(f"**{item['item']}**")
-                with col2:
-                    if pd.notna(item['result']):
-                        st.markdown(f"Last: {item['result']}")
-                with col3:
-                    st.markdown(f"**Due:** {item['next_due'].strftime('%Y-%m-%d')}")
-                st.divider()
-    
-    # Up to date items
-    up_to_date_items = s[~(s["overdue"] | s["due_soon"])].sort_values("next_due")
-    if not up_to_date_items.empty:
-        st.markdown("### ✅ **Up to Date**")
-        for _, item in up_to_date_items.iterrows():
-            with st.container():
-                col1, col2, col3 = st.columns([2, 2, 1])
-                with col1:
-                    st.markdown(f"**{item['item']}**")
-                with col2:
-                    if pd.notna(item['result']):
-                        st.markdown(f"Last: {item['result']}")
-                with col3:
-                    st.markdown(f"**Next:** {item['next_due'].strftime('%Y-%m-%d')}")
-                st.divider()
-
-
 # ──────────────────────────────────────────────────────────────────────────────
 # Sidebar Navigation
 # ──────────────────────────────────────────────────────────────────────────────
@@ -1994,14 +2351,12 @@ def sidebar_nav() -> str:
         "Go to",
         [
             "Overview",
-            "Journey Timeline",
             "Diagnostics & Labs",
             "Daily/Weekly Trends",
             "Fitness & Body Composition",
             "Interventions & Rationale",
             "Chats",
             "KPIs & Reports",
-            "Screening",
         ],
         index=0,
     )
@@ -2035,9 +2390,6 @@ def main():
 
     if page == "Overview":
         page_overview(data)
-    elif page == "Journey Timeline":
-        st.subheader("Journey timeline (interactive)")
-        build_timeline(data, clickable=True)
     elif page == "Diagnostics & Labs":
         page_diagnostics(data)
     elif page == "Daily/Weekly Trends":
@@ -2050,8 +2402,6 @@ def main():
         page_chats(data)
     elif page == "KPIs & Reports":
         page_kpis(data)
-    elif page == "Screening":
-        page_screening(data)
 
 
 if __name__ == "__main__":
