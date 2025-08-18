@@ -1,0 +1,674 @@
+[
+  {
+    "date": "2025-01-01",
+    "type": "onboarding",
+    "role": "Ruby (Concierge)",
+    "message": "Member onboarding: collect medical history, priorities, diets followed, and schedule test discussions.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-03",
+    "type": "onboarding_discussion",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Intro consultation on diagnostics and medical history review.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-04",
+    "type": "nutrition_intro",
+    "role": "Carla (Nutritionist)",
+    "message": "Discuss diet patterns, supplementation, and intake logging setup.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-08",
+    "type": "sample_collection",
+    "role": "Ruby (Concierge)",
+    "message": "Collect biological samples and initiate scan suite (blood, imaging).",
+    "notified": false
+  },
+  {
+    "date": "2025-01-10",
+    "type": "physical_exam",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Full physical examination and vitals assessment.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-15",
+    "type": "sample_collection",
+    "role": "Ruby (Concierge)",
+    "message": "Collect biological samples and initiate scan suite (blood, imaging).",
+    "notified": false
+  },
+  {
+    "date": "2025-01-15",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-17",
+    "type": "physical_exam",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Full physical examination and vitals assessment.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-22",
+    "type": "sample_collection",
+    "role": "Ruby (Concierge)",
+    "message": "Collect biological samples and initiate scan suite (blood, imaging).",
+    "notified": false
+  },
+  {
+    "date": "2025-01-22",
+    "type": "diagnostic_results",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Share diagnostic results. Categorize findings: major issues, need followup, all okay.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-23",
+    "type": "discussion",
+    "role": "Advik (Performance Scientist)",
+    "message": "Discuss wearable + test correlations. Identify physiological trends.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-24",
+    "type": "physical_exam",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Full physical examination and vitals assessment.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-24",
+    "type": "discussion",
+    "role": "Rachel (PT)",
+    "message": "Review functional movement tests. Recommend mobility/strength focus.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-25",
+    "type": "commitment",
+    "role": "Ruby (Concierge)",
+    "message": "Gather member\u2019s commitment to selected lifestyle interventions.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-29",
+    "type": "diagnostic_results",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Share diagnostic results. Categorize findings: major issues, need followup, all okay.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-29",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-30",
+    "type": "discussion",
+    "role": "Advik (Performance Scientist)",
+    "message": "Discuss wearable + test correlations. Identify physiological trends.",
+    "notified": false
+  },
+  {
+    "date": "2025-01-31",
+    "type": "discussion",
+    "role": "Rachel (PT)",
+    "message": "Review functional movement tests. Recommend mobility/strength focus.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-01",
+    "type": "commitment",
+    "role": "Ruby (Concierge)",
+    "message": "Gather member\u2019s commitment to selected lifestyle interventions.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-05",
+    "type": "diagnostic_results",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Share diagnostic results. Categorize findings: major issues, need followup, all okay.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-06",
+    "type": "discussion",
+    "role": "Advik (Performance Scientist)",
+    "message": "Discuss wearable + test correlations. Identify physiological trends.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-07",
+    "type": "discussion",
+    "role": "Rachel (PT)",
+    "message": "Review functional movement tests. Recommend mobility/strength focus.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-08",
+    "type": "commitment",
+    "role": "Ruby (Concierge)",
+    "message": "Gather member\u2019s commitment to selected lifestyle interventions.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-12",
+    "type": "diagnostic_results",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Share diagnostic results. Categorize findings: major issues, need followup, all okay.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-12",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-13",
+    "type": "discussion",
+    "role": "Advik (Performance Scientist)",
+    "message": "Discuss wearable + test correlations. Identify physiological trends.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-14",
+    "type": "discussion",
+    "role": "Rachel (PT)",
+    "message": "Review functional movement tests. Recommend mobility/strength focus.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-15",
+    "type": "commitment",
+    "role": "Ruby (Concierge)",
+    "message": "Gather member\u2019s commitment to selected lifestyle interventions.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-19",
+    "type": "diagnostic_results",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Share diagnostic results. Categorize findings: major issues, need followup, all okay.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-19",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-20",
+    "type": "discussion",
+    "role": "Advik (Performance Scientist)",
+    "message": "Discuss wearable + test correlations. Identify physiological trends.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-20",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-21",
+    "type": "discussion",
+    "role": "Rachel (PT)",
+    "message": "Review functional movement tests. Recommend mobility/strength focus.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-21",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-22",
+    "type": "commitment",
+    "role": "Ruby (Concierge)",
+    "message": "Gather member\u2019s commitment to selected lifestyle interventions.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-22",
+    "type": "medical_review",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Fortnightly review of member\u2019s medical records and progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-26",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-26",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-27",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-02-28",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-05",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-06",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-07",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-08",
+    "type": "medical_review",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Fortnightly review of member\u2019s medical records and progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-12",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-12",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-13",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-14",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-19",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-20",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-21",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-21",
+    "type": "followup_tests",
+    "role": "Ruby (Concierge)",
+    "message": "Schedule follow-up tests to review progress at week 12.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-22",
+    "type": "medical_review",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Fortnightly review of member\u2019s medical records and progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-23",
+    "type": "physician_review",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Review follow-up test results and adjust care plan.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-26",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-26",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-27",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-03-28",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-02",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-03",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-04",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-05",
+    "type": "medical_review",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Fortnightly review of member\u2019s medical records and progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-09",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-09",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-10",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-11",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-16",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-17",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-18",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-19",
+    "type": "medical_review",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Fortnightly review of member\u2019s medical records and progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-23",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-23",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-24",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-25",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-04-30",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-01",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-01",
+    "type": "strategic_review",
+    "role": "Neel (Concierge Lead)",
+    "message": "Mid-program strategic review: align goals and adjust roadmap.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-02",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-03",
+    "type": "medical_review",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Fortnightly review of member\u2019s medical records and progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-07",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-07",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-08",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-09",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-14",
+    "type": "weekly_checkin",
+    "role": "Ruby (Concierge)",
+    "message": "Weekly concierge check-in to remove blockers and track progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-15",
+    "type": "exercise_push",
+    "role": "Rachel (PT)",
+    "message": "Push mobility/strength exercises. Adjust loads as needed.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-16",
+    "type": "nutrition_followup",
+    "role": "Carla (Nutritionist)",
+    "message": "Follow-up on nutrition adherence and CGM insights.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-17",
+    "type": "medical_review",
+    "role": "Dr. Warren (Medical Strategist)",
+    "message": "Fortnightly review of member\u2019s medical records and progress.",
+    "notified": false
+  },
+  {
+    "date": "2025-05-21",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-06-04",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-06-18",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-07-02",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-07-16",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-07-24",
+    "type": "strategic_review",
+    "role": "Neel (Concierge Lead)",
+    "message": "Late-program strategic session: prepare roadmap for next phase.",
+    "notified": false
+  },
+  {
+    "date": "2025-07-30",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-08-13",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  },
+  {
+    "date": "2025-08-27",
+    "type": "exercise_update",
+    "role": "Rachel (PT)",
+    "message": "Updated exercise program based on progress metrics.",
+    "notified": false
+  }
+]

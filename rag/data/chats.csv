@@ -1,286 +1,31 @@
-datetime,sender,role,message,tags,linked_intervention_id
-2025-01-01 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-01-01 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-01-08 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-01-08 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-01-15 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-01-15 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-01-22 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-01-22 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-01-29 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-01-29 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-02-05 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-02-05 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-02-12 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-02-12 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-02-19 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-02-19 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-02-26 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-02-26 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-03-05 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-03-05 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-03-12 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-03-12 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-03-19 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-03-19 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-03-26 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-03-26 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-04-02 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-04-02 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-04-09 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-04-09 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-04-16 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-04-16 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-04-23 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-04-23 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-04-30 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-04-30 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-05-07 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-05-07 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-05-14 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-05-14 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-05-21 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-05-21 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-05-28 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-05-28 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-06-04 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-06-04 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-06-11 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-06-11 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-06-18 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-06-18 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-06-25 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-06-25 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-07-02 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-07-02 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-07-09 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-07-09 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-07-16 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-07-16 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-07-23 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-07-23 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-07-30 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-07-30 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-08-06 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-08-06 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-08-13 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-08-13 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-08-20 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-08-20 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-08-27 00:00,member,Member,"Weekly update: travel light, stayed on plan about 70%. Sleep was okay.",progress;weekly,
-2025-08-27 00:00,coach,Coach,Thanks for the update. Keep hydration up on travel days; we will hold volume this week.,plan;advice,
-2025-01-19 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-20 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-21 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-22 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-23 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-24 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-25 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-26 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-27 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-28 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-29 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-30 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-31 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-01 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-02 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-03 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-04 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-05 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-06 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-07 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-08 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-09 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-12 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-13 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-14 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-15 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-16 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-17 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-18 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-19 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-20 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-21 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-22 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-23 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-24 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-25 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-26 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-27 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-02-28 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-01 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-02 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-03 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-04 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-05 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-06 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-07 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-08 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-09 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-10 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-11 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-12 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-13 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-14 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-15 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-16 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-17 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-18 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-19 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-20 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-21 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-22 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-23 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-24 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-25 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-26 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-27 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-28 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-29 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-30 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-03-31 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-01 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-02 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-03 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-04 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-05 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-06 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-07 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-08 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-09 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-10 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-11 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-12 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-13 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-14 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-15 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-16 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-17 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-18 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-19 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-20 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-21 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-22 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-23 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-24 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-25 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-26 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-27 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-28 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-29 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-04-30 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-01 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-02 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-03 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-04 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-05 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-06 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-07 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-08 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-09 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-10 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-11 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-12 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-13 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-14 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-15 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-16 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-17 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-18 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-21 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=72.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-24 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-25 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-26 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-27 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-28 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-29 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-30 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-05-31 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-01 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-02 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-03 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-04 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-05 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-06 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-07 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-08 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-09 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-10 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-11 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-12 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-13 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-14 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-15 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-16 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-17 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-18 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-19 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-20 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-21 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-22 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-23 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-24 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-25 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-26 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-27 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-28 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-29 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-06-30 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-01 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-02 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-03 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-04 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-05 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-06 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-07 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-08 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-09 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-10 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-11 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-12 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-13 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-14 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-16 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=72.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-17 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-18 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-19 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-20 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-21 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-22 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-23 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-24 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-25 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-26 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-27 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-28 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-29 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-30 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-07-31 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-01 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-02 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-03 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-04 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-05 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-06 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-07 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-08 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-09 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-10 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-11 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-12 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-13 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-14 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-15 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-16 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-17 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-18 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-19 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-20 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-21 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-22 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-23 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.7. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-24 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-08-29 10:00,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.3. Action: deload week; sleep hygiene; -20% intensity.,intervention,CV-01
-2025-01-29 10:00,physician,Physician,Triggered LIP-02 due to ldl_mgdl=144.4. Action: tighten diet; +1 cardio; omega-3.,intervention;labs,LIP-02
-2025-03-26 10:00,physician,Physician,Triggered LIP-02 due to ldl_mgdl=142.7. Action: tighten diet; +1 cardio; omega-3.,intervention;labs,LIP-02
-2025-06-18 10:00,physician,Physician,Triggered LIP-02 due to ldl_mgdl=140.0. Action: tighten diet; +1 cardio; omega-3.,intervention;labs,LIP-02
+timestamp,sender,message
+2025-01-01 13:10,Ruby,"Member onboarding: collect medical history, priorities, diets followed, and schedule test discussions."
+2025-01-01 14:24,Rohan,Can you explain my latest lab results?
+2025-01-01 15:42,Dr. Warren,Our systems are currently busy. Please ask again later.
+2025-01-01 16:30,Rohan,I've been having trouble sleeping
+2025-01-01 18:13,Dr. Warren,"Your average resting heart rate over the last 7 days has been elevated, averaging 73.0-73.9 bpm [Doc 1, Doc 2, Doc 3]. This suggests your body is not fully recovering. I'm approving a deload week, focusing on sleep hygiene, and a 20% reduction in training intensity to address this [Doc 1, Doc 2, Doc 3]. [General Context]"
+2025-01-02 08:18,Rohan,How can I improve my recovery scores?
+2025-01-02 08:45,Advik,"Let's analyze your recovery data. Your VO2 max has been consistently around 35.5, and your strength metrics (deadlift 131kg, squat 102kg) are stable [Doc 1, Doc 2, Doc 3]. To improve recovery, we'd need to explore factors beyond these metrics, such as sleep quality, HRV trends, and stress levels. Are you tracking those? [General Context]"
+2025-01-02 09:25,Rohan," Rohan: Hey Doctor, my recent blood pressure readings have been slightly elevated. What could be the possible causes and what precautions should I take to keep it under control?"
+2025-01-02 09:53,Advik,"Rohan, elevated blood pressure can stem from various factors. Your recent VO2 max readings are consistent around 35.2-35.8 [doc 1, doc 2, doc 3], indicating a moderate aerobic capacity. While your strength metrics (deadlift 131kg, squat 102kg) are stable [doc 1, doc 2, doc 3], it's worth exploring how sleep, recovery, and stress, as tracked by your wearable, might be influencing your cardiovascular system. Let's analyze those patterns to identify potential contributing factors. [General Context]"
+2025-01-02 10:26,Rohan,Can we reschedule my appointment?
+2025-01-02 12:21,Ruby,"Hi there! I can definitely help with that. To reschedule your appointment, could you please confirm which specific appointment you're referring to? Once I have that, I'll check availability and get back to you right away. [General Context]"
+2025-01-03 09:48,Dr. Warren,Intro consultation on diagnostics and medical history review.
+2025-01-03 11:40,Ruby,Hello! How’s your day going so far? Hope you’re feeling good and healthy today.
+2025-01-03 12:33,Rohan, How can I monitor and manage my high blood pressure at home?
+2025-01-03 13:10,,"I can help you with that! To manage your high blood pressure at home, it's important to monitor it regularly. You can use a home blood pressure monitor for this. Would you like me to help you find one or provide some resources on how to use it effectively? [doc_id] [General Context]"
+2025-01-03 14:43,Rohan,"My Garmin shows high stress levels, what should I do?"
+2025-01-03 16:30,,"High stress levels can impact sleep and recovery. Let's examine your data for potential correlations.
+
+Your recent data shows consistent steps around 7600 [doc_id] and resting heart rate at 75 bpm [doc_id]. However, sleep duration varied, from 5.46h to 6.5h [doc_id]. HRV also showed some fluctuation, ranging from 25.0 to 27.6 [doc_id].
+
+To investigate this, we could experiment by tracking stress alongside sleep quality and HRV. This would help us identify if specific sleep patterns or HRV trends are associated with your reported high stress. [General Context]"
+2025-01-04 09:59,Carla,"Discuss diet patterns, supplementation, and intake logging setup."
+2025-01-04 11:00,Ruby,Hello! How’s your day going so far? Hope you’re feeling good and healthy today.
+2025-01-04 11:29,Rohan," Hello Rohan, how's your health been? I hope everything's fine. Just as a precautionary measure, have you had your blood pressure checked recently? If not, please consider making an appointment with your doctor to get it checked. High blood pressure, if left untreated, can lead to serious health issues like heart disease and stroke. Let me know if there's anything else I can assist you with."
+2025-01-04 11:49,Ruby,"Hi Rohan! I'm glad you're checking in. Your recent LDL levels were 142.7 mg/dL [Doc 1], 140.0 mg/dL [Doc 2], and 144.4 mg/dL [Doc 3]. The nutritionist recommended tightening your diet, adding cardio, and taking omega-3 supplements [Doc 1, Doc 2, Doc 3]. I'll add a reminder for your next blood pressure check. Let me know if you'd like me to help schedule that! [General Context]"
+2025-01-05 08:43,Ruby,Hello! How’s your day going so far? Hope you’re feeling good and healthy today.
+2025-01-05 09:26,Rohan," As a client named Rohan, I would like to know more about the risks associated with high blood pressure and how I can manage it effectively. I am concerned about the long-term effects on my health and want to make sure I am taking the necessary steps to maintain a healthy blood pressure. Additionally, I would like to know about any lifestyle changes or medications that could help me manage my condition."
+2025-01-05 11:10,Ruby,"Hi Rohan, I understand you're looking for information on high blood pressure. While I can access your LDL cholesterol levels [Doc 1, Doc 2, Doc 3], I don't have specific data on your blood pressure. For personalized advice on managing blood pressure, including lifestyle changes and potential medications, I recommend discussing this directly with your doctor. They can provide the most accurate guidance based on your individual health. [General Context]"
+2025-01-06 09:04,Rohan,I've been having trouble sleeping
+2025-01-06 10:17,Advik,"I've analyzed your recent data. Your sleep duration has been around 6 hours, with HRV fluctuating between 25.5 and 28.2 [doc_1, doc_2, doc_3]. It appears your resting heart rate has remained consistent around 72-73 bpm [doc_1, doc_2, doc_3]. To investigate further, we could experiment with tracking a specific pre-sleep routine and its impact on your HRV and sleep duration. [General Context]"

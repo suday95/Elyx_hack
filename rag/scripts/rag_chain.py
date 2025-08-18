@@ -81,18 +81,18 @@ def generate_answer(role, question, facts, retrieved_docs):
     system_prompt = (
         f"{ROLE_PROMPTS[role]}\n\n"
         "STRICT RULES:\n"
-        "1. Use ONLY the provided Facts and Context\n"
-        "3. Keep replies ≤5 sentences, WhatsApp-style\n"
-        "4. Add bracketed citations [doc_id] after EVERY factual statement\n"
-        "5. Never invent numbers, dates, or interventions\n"
-        "6. Stay within your role's scope, If they deals with other role specify them, say you are going refer to them\n\n"
+"1. Use only Facts/Context"
+"2. ≤5 sentences, WhatsApp style"
+"3. Cite [doc_id] after facts"
+"4. No fake nums/dates/interventions"
+"5. Stay in role; else refer"
     )
     
     # Create the full prompt
     full_prompt = f"{system_prompt}{context}\n\nQuestion: {question}\nAnswer:"
     
     # Generate with Gemini
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash-lite')
     response = model.generate_content(
         full_prompt,
         generation_config=genai.types.GenerationConfig(
@@ -101,10 +101,7 @@ def generate_answer(role, question, facts, retrieved_docs):
             top_p=0.95
         ),
         safety_settings={
-            'HATE': 'block_none',
-            'HARASSMENT': 'block_none',
-            'SEXUAL': 'block_none',
-            'DANGEROUS': 'block_none'
+            'HATE': 'block_none'
         }
     )
     input_tokens = count_tokens(full_prompt)
