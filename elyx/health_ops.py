@@ -1930,7 +1930,7 @@ def page_chats(d: Dict[str, pd.DataFrame]):
             min_date = ch[timestamp_col].min().date()
             max_date = ch[timestamp_col].max().date()
             date_range = st.date_input(
-                "📅 Date range",
+                "📅 Date range(chat box can only hold 3 months data kindly select a 3 months range at max)",
                 value=(min_date, max_date),
                 min_value=min_date,
                 max_value=max_date,

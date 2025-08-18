@@ -1,0 +1,469 @@
+datetime,sender,role,message,tags,linked_intervention_id
+2025-01-06 08:00 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,
+2025-01-06 18:20 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.6h.",member-initiated,
+2025-01-06 23:20 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,
+2025-01-01 15:05 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,
+2025-01-01 16:05 +0800,nutritionist,Nutritionist,Quick nutrition tip: prioritize lean protein at meals and avoid late carbs.,reply;nutritionist,
+2025-01-06 13:10 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,
+2025-01-06 16:10 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,
+2025-01-05 11:45 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.9h.",member-initiated,
+2025-01-11 08:20 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,
+2025-01-11 09:20 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,
+2025-01-09 19:10 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 7.1h.",member-initiated,
+2025-01-09 22:10 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,
+2025-01-10 12:05 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,
+2025-01-09 15:30 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.0h last night.,member-initiated,
+2025-01-09 21:30 +0800,concierge,Concierge,Noted — I can adjust your schedule and send a hotel workout.,reply;concierge,
+2025-01-20 12:45 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.1h.",member-initiated,CV-01
+2025-01-18 11:00 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 7.2h last night.,member-initiated,CV-01
+2025-01-18 17:00 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-01-16 11:05 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.9h last night.,member-initiated,CV-01
+2025-01-18 21:20 +0800,member,Member,"Curious about timing of cardio. Also, energy low this morning.",member-initiated,CV-01
+2025-01-18 22:20 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-01-23 17:05 +0800,member,Member,"Curious about sleep supplements. Also, energy low this morning.",member-initiated,CV-01
+2025-01-23 22:05 +0800,concierge,Concierge,I'll log this for the coach and book a follow-up if needed.,reply;concierge,CV-01
+2025-01-26 20:00 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.8h.",member-initiated,CV-01
+2025-01-24 08:10 +0800,member,Member,"Curious about keto vs low-carb. Also, energy low this morning.",member-initiated,CV-01
+2025-01-27 11:20 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.5h last night.,member-initiated,CV-01
+2025-01-24 20:30 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-01-25 01:30 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-02-02 12:15 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 5.9h.",member-initiated,CV-01
+2025-02-04 19:10 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 5.8h last night.,member-initiated,CV-01
+2025-02-04 20:10 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-02-04 09:05 +0800,member,Member,"Curious about timing of cardio. Also, energy low this morning.",member-initiated,CV-01
+2025-02-04 13:05 +0800,nutritionist,Nutritionist,Quick nutrition tip: prioritize lean protein at meals and avoid late carbs.,reply;nutritionist,CV-01
+2025-02-02 19:30 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.8h last night.,member-initiated,CV-01
+2025-02-03 12:15 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-02-03 17:15 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-02-06 16:05 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 5.8h.",member-initiated,CV-01
+2025-02-06 19:05 +0800,concierge,Concierge,Noted — I can adjust your schedule and send a hotel workout.,reply;concierge,CV-01
+2025-02-09 10:10 +0800,member,Member,"Curious about timing of cardio. Also, energy low this morning.",member-initiated,CV-01
+2025-02-09 16:15 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 7.0h last night.,member-initiated,CV-01
+2025-02-09 20:15 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-02-15 13:15 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.8h.",member-initiated,CV-01
+2025-02-15 14:15 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-02-13 10:20 +0800,member,Member,"Curious about timing of cardio. Also, energy low this morning.",member-initiated,CV-01
+2025-02-13 11:20 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-02-18 20:45 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-02-18 20:05 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.4h last night.,member-initiated,CV-01
+2025-02-18 21:05 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-02-15 07:15 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-02-15 13:15 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-02-24 18:15 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.0h last night.,member-initiated,CV-01
+2025-02-23 18:20 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.9h.",member-initiated,CV-01
+2025-02-23 23:20 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-02-19 15:00 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 5.8h last night.,member-initiated,CV-01
+2025-02-20 13:00 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-03-01 17:20 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-03-01 19:20 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-03-01 09:30 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-03-01 14:30 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-02-26 15:05 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-02-27 12:10 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.4h last night.,member-initiated,CV-01
+2025-03-04 17:20 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.8h.",member-initiated,CV-01
+2025-02-26 21:05 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-03-06 11:10 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-03-06 14:10 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-03-08 11:45 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 5.8h.",member-initiated,CV-01
+2025-03-05 07:10 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.7h last night.,member-initiated,CV-01
+2025-03-05 13:10 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-03-09 07:00 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 7.2h.",member-initiated,CV-01
+2025-03-09 12:00 +0800,nutritionist,Nutritionist,Quick nutrition tip: prioritize lean protein at meals and avoid late carbs.,reply;nutritionist,CV-01
+2025-03-08 09:00 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-03-06 17:05 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.3h.",member-initiated,CV-01
+2025-03-10 09:05 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 7.3h last night.,member-initiated,CV-01
+2025-03-12 09:30 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-03-18 18:45 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.1h last night.,member-initiated,CV-01
+2025-03-18 22:45 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-03-20 20:15 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-03-21 00:15 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-03-21 20:00 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-03-25 15:10 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 5.9h.",member-initiated,LIP-02
+2025-03-25 18:10 +0800,concierge,Concierge,Noted — I can adjust your schedule and send a hotel workout.,reply;concierge,LIP-02
+2025-03-19 16:15 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-03-19 17:15 +0800,concierge,Concierge,I'll log this for the coach and book a follow-up if needed.,reply;concierge,CV-01
+2025-03-23 10:10 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.8h.",member-initiated,CV-01
+2025-03-23 16:10 +0800,nutritionist,Nutritionist,Quick nutrition tip: prioritize lean protein at meals and avoid late carbs.,reply;nutritionist,CV-01
+2025-03-28 13:00 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,
+2025-03-28 15:10 +0800,member,Member,"Curious about supplements. Also, energy low this morning.",member-initiated,
+2025-03-28 21:10 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,
+2025-03-31 18:05 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-03-31 21:05 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-03-29 19:20 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-03-30 00:20 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-04-01 21:45 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.8h last night.,member-initiated,CV-01
+2025-04-02 00:45 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-04-08 19:05 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,
+2025-04-08 23:05 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,
+2025-04-08 19:00 +0800,member,Member,"Curious about timing of cardio. Also, energy low this morning.",member-initiated,
+2025-04-05 14:15 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 5.9h last night.,member-initiated,CV-01
+2025-04-08 19:00 +0800,member,Member,"Curious about sleep supplements. Also, energy low this morning.",member-initiated,
+2025-04-08 20:00 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,
+2025-04-03 19:15 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-04-05 16:45 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-04-14 20:15 +0800,member,Member,"Curious about timing of cardio. Also, energy low this morning.",member-initiated,CV-01
+2025-04-11 19:45 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,
+2025-04-11 22:45 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,
+2025-04-11 12:10 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,
+2025-04-11 18:10 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,
+2025-04-09 13:15 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,
+2025-04-09 17:15 +0800,nutritionist,Nutritionist,Quick nutrition tip: prioritize lean protein at meals and avoid late carbs.,reply;nutritionist,
+2025-04-22 21:45 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-04-18 19:15 +0800,member,Member,"Curious about timing of cardio. Also, energy low this morning.",member-initiated,CV-01
+2025-04-18 23:15 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-04-19 12:30 +0800,member,Member,"Curious about sleep supplements. Also, energy low this morning.",member-initiated,CV-01
+2025-04-20 15:00 +0800,member,Member,"Curious about keto vs low-carb. Also, energy low this morning.",member-initiated,CV-01
+2025-04-20 19:00 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-04-16 11:15 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-04-16 14:15 +0800,nutritionist,Nutritionist,I can send a 3-day travel meal plan if you'd like.,reply;nutritionist,CV-01
+2025-04-18 20:00 +0800,member,Member,"Curious about keto vs low-carb. Also, energy low this morning.",member-initiated,CV-01
+2025-04-25 10:30 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.9h.",member-initiated,CV-01
+2025-04-24 10:45 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.7h.",member-initiated,CV-01
+2025-04-24 15:45 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-04-26 18:10 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-04-24 11:00 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-04-24 15:00 +0800,concierge,Concierge,I'll log this for the coach and book a follow-up if needed.,reply;concierge,CV-01
+2025-04-28 10:00 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-04-28 16:00 +0800,nutritionist,Nutritionist,Quick nutrition tip: prioritize lean protein at meals and avoid late carbs.,reply;nutritionist,CV-01
+2025-04-29 16:45 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.3h.",member-initiated,CV-01
+2025-04-30 15:30 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-05-07 13:10 +0800,member,Member,"Curious about sleep supplements. Also, energy low this morning.",member-initiated,
+2025-05-07 19:10 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,
+2025-05-11 19:20 +0800,member,Member,"Curious about supplements. Also, energy low this morning.",member-initiated,CV-01
+2025-05-11 20:20 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-05-10 10:45 +0800,member,Member,"Curious about sleep supplements. Also, energy low this morning.",member-initiated,CV-01
+2025-05-10 13:45 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-05-10 10:10 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-05-10 12:10 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-05-08 18:15 +0800,member,Member,"Curious about timing of cardio. Also, energy low this morning.",member-initiated,
+2025-05-12 18:15 +0800,member,Member,"Curious about keto vs low-carb. Also, energy low this morning.",member-initiated,CV-01
+2025-05-12 20:15 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-05-12 16:10 +0800,member,Member,"Curious about supplements. Also, energy low this morning.",member-initiated,CV-01
+2025-05-12 19:10 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-05-19 14:10 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-05-16 08:30 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-05-16 11:30 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-05-25 19:20 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-05-23 10:10 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.2h last night.,member-initiated,CV-01
+2025-05-23 15:10 +0800,concierge,Concierge,I'll log this for the coach and book a follow-up if needed.,reply;concierge,CV-01
+2025-05-26 09:30 +0800,member,Member,"Curious about keto vs low-carb. Also, energy low this morning.",member-initiated,CV-01
+2025-05-26 13:30 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-05-22 07:10 +0800,member,Member,"Curious about keto vs low-carb. Also, energy low this morning.",member-initiated,CV-01
+2025-05-22 13:10 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-05-21 09:05 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-05-21 15:45 +0800,member,Member,"Curious about timing of cardio. Also, energy low this morning.",member-initiated,CV-01
+2025-05-24 14:15 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-05-24 19:15 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-05-21 19:05 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.1h last night.,member-initiated,CV-01
+2025-05-21 20:05 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-05-21 13:15 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-05-21 19:15 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-05-21 17:05 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-05-21 23:05 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-05-23 20:05 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 5.8h.",member-initiated,CV-01
+2025-05-23 23:05 +0800,nutritionist,Nutritionist,I can send a 3-day travel meal plan if you'd like.,reply;nutritionist,CV-01
+2025-05-28 14:30 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-05-28 15:30 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-05-28 21:15 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-05-29 02:15 +0800,concierge,Concierge,Noted — I can adjust your schedule and send a hotel workout.,reply;concierge,CV-01
+2025-06-03 17:45 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-06-03 20:45 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-06-01 13:30 +0800,member,Member,"Curious about sleep supplements. Also, energy low this morning.",member-initiated,CV-01
+2025-06-01 19:30 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-06-10 09:10 +0800,member,Member,"Curious about supplements. Also, energy low this morning.",member-initiated,CV-01
+2025-06-07 20:45 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-06-08 00:45 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-06-10 07:30 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-06-10 11:30 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-06-14 19:00 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.1h last night.,member-initiated,CV-01
+2025-06-14 21:30 +0800,member,Member,"Curious about timing of cardio. Also, energy low this morning.",member-initiated,CV-01
+2025-06-13 15:00 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-06-11 14:00 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.5h last night.,member-initiated,CV-01
+2025-06-11 18:00 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-06-12 14:20 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.3h last night.,member-initiated,CV-01
+2025-06-13 19:45 +0800,member,Member,"Curious about supplements. Also, energy low this morning.",member-initiated,CV-01
+2025-06-13 18:10 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-06-14 15:15 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-06-14 17:15 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-06-19 16:15 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 7.1h last night.,member-initiated,CV-01
+2025-06-19 22:15 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-06-21 17:45 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.5h last night.,member-initiated,CV-01
+2025-06-21 20:45 +0800,concierge,Concierge,Noted — I can adjust your schedule and send a hotel workout.,reply;concierge,CV-01
+2025-06-24 20:15 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.5h.",member-initiated,CV-01
+2025-06-25 02:15 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-06-25 14:45 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-07-01 12:45 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-07-01 14:45 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-07-01 17:45 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-07-07 08:15 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.9h.",member-initiated,CV-01
+2025-07-07 09:15 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-07-04 19:00 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-07-05 00:00 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-07-08 09:05 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 5.8h last night.,member-initiated,CV-01
+2025-07-03 14:20 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.1h last night.,member-initiated,CV-01
+2025-07-03 18:20 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-07-07 15:05 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.4h.",member-initiated,CV-01
+2025-07-11 17:15 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-07-11 21:15 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-07-10 13:20 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-07-10 17:20 +0800,nutritionist,Nutritionist,I can send a 3-day travel meal plan if you'd like.,reply;nutritionist,CV-01
+2025-07-09 16:45 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 7.2h.",member-initiated,CV-01
+2025-07-11 19:45 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.7h last night.,member-initiated,CV-01
+2025-07-11 22:45 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-07-15 18:45 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.7h last night.,member-initiated,CV-01
+2025-07-15 23:45 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-07-14 09:00 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-07-14 14:00 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-07-13 15:10 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.1h last night.,member-initiated,CV-01
+2025-07-11 18:45 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-07-17 19:05 +0800,member,Member,"Curious about supplements. Also, energy low this morning.",member-initiated,
+2025-07-17 22:05 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,
+2025-07-16 14:10 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-07-16 15:10 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-07-20 12:20 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.7h last night.,member-initiated,CV-01
+2025-07-25 17:15 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 5.9h.",member-initiated,CV-01
+2025-07-25 18:15 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-07-27 09:15 +0800,member,Member,"Curious about sleep supplements. Also, energy low this morning.",member-initiated,CV-01
+2025-07-27 13:15 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-07-30 20:15 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-07-31 00:15 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-07-31 20:10 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 7.3h.",member-initiated,CV-01
+2025-07-31 23:10 +0800,concierge,Concierge,Noted — I can adjust your schedule and send a hotel workout.,reply;concierge,CV-01
+2025-08-02 11:05 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 7.2h.",member-initiated,CV-01
+2025-08-02 17:05 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-07-30 07:45 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-07-31 08:45 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-08-07 12:45 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 7.0h last night.,member-initiated,CV-01
+2025-08-07 14:45 +0800,concierge,Concierge,I'll log this for the coach and book a follow-up if needed.,reply;concierge,CV-01
+2025-08-12 09:00 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 5.9h.",member-initiated,CV-01
+2025-08-07 16:10 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.0h.",member-initiated,CV-01
+2025-08-07 17:10 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-08-13 14:15 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-08-13 19:15 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-08-18 19:45 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-08-18 23:45 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-08-18 08:15 +0800,member,Member,"Curious about keto vs low-carb. Also, energy low this morning.",member-initiated,CV-01
+2025-08-18 10:15 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-08-17 17:20 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-08-17 11:15 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-08-13 20:30 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-08-14 00:30 +0800,nutritionist,Nutritionist,I can send a 3-day travel meal plan if you'd like.,reply;nutritionist,CV-01
+2025-08-19 14:15 +0800,member,Member,"Curious about supplements. Also, energy low this morning.",member-initiated,CV-01
+2025-08-19 17:15 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-08-18 21:15 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 5.8h.",member-initiated,CV-01
+2025-08-19 03:15 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-08-26 09:20 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.6h.",member-initiated,CV-01
+2025-08-23 12:45 +0800,member,Member,"Curious about keto vs low-carb. Also, energy low this morning.",member-initiated,CV-01
+2025-08-24 11:10 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.6h.",member-initiated,CV-01
+2025-08-24 12:10 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-08-26 15:10 +0800,member,Member,"Quick check-in: travel this week, managed ~50% of plan. Sleep 6.9h.",member-initiated,CV-01
+2025-08-26 15:45 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-08-25 20:30 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-08-22 21:10 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-08-22 23:10 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-08-25 07:00 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-08-25 10:00 +0800,coach,Coach,"Noted. If glucose spiked, log meals and I'll review trends.",reply;coach,CV-01
+2025-08-22 19:20 +0800,member,Member,Small heads-up — had one high reading on glucose this morning.,member-initiated,CV-01
+2025-08-22 20:20 +0800,nutritionist,Nutritionist,Quick nutrition tip: prioritize lean protein at meals and avoid late carbs.,reply;nutritionist,CV-01
+2025-08-22 14:30 +0800,member,Member,"Curious about sleep supplements. Also, energy low this morning.",member-initiated,CV-01
+2025-08-22 19:30 +0800,coach,Coach,Got it — noted. Quick tip: prioritize sleep + hydration. We'll follow up.,reply;coach,CV-01
+2025-08-29 13:00 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,CV-01
+2025-08-29 15:00 +0800,coach,Coach,Thanks for updating. Keep volume light during travel and track sleep.,reply;coach,CV-01
+2025-08-31 07:00 +0800,member,Member,Question: Is it ok to do high-intensity on travel days? Also slept 6.2h last night.,member-initiated,
+2025-09-02 11:10 +0800,member,Member,Progress: followed diet ~50%. Steps are down due to travel.,member-initiated,
+2025-01-17 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=71.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-01-24,intervention,CV-01
+2025-01-18 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=72.3. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-01-25,intervention,CV-01
+2025-01-19 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-01-26,intervention,CV-01
+2025-01-20 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-01-27,intervention,CV-01
+2025-01-21 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-01-28,intervention,CV-01
+2025-01-22 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-01-29,intervention,CV-01
+2025-01-23 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-01-30,intervention,CV-01
+2025-01-24 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-01-31,intervention,CV-01
+2025-01-25 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-01,intervention,CV-01
+2025-01-26 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-02,intervention,CV-01
+2025-01-27 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-03,intervention,CV-01
+2025-01-28 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-04,intervention,CV-01
+2025-01-29 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-05,intervention,CV-01
+2025-01-30 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-06,intervention,CV-01
+2025-01-31 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-07,intervention,CV-01
+2025-02-01 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-08,intervention,CV-01
+2025-02-02 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-09,intervention,CV-01
+2025-02-03 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-10,intervention,CV-01
+2025-02-04 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-11,intervention,CV-01
+2025-02-05 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-12,intervention,CV-01
+2025-02-06 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-13,intervention,CV-01
+2025-02-07 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-14,intervention,CV-01
+2025-02-08 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-15,intervention,CV-01
+2025-02-09 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.3. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-16,intervention,CV-01
+2025-02-14 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.3. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-21,intervention,CV-01
+2025-02-15 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-22,intervention,CV-01
+2025-02-16 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-23,intervention,CV-01
+2025-02-17 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-24,intervention,CV-01
+2025-02-18 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-25,intervention,CV-01
+2025-02-19 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-26,intervention,CV-01
+2025-02-20 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-27,intervention,CV-01
+2025-02-21 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-02-28,intervention,CV-01
+2025-02-22 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-01,intervention,CV-01
+2025-02-23 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-02,intervention,CV-01
+2025-02-24 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-03,intervention,CV-01
+2025-02-26 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-05,intervention,CV-01
+2025-02-27 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.3. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-06,intervention,CV-01
+2025-02-28 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-07,intervention,CV-01
+2025-03-01 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-08,intervention,CV-01
+2025-03-02 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-09,intervention,CV-01
+2025-03-03 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-10,intervention,CV-01
+2025-03-04 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-11,intervention,CV-01
+2025-03-05 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-12,intervention,CV-01
+2025-03-06 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-13,intervention,CV-01
+2025-03-07 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-14,intervention,CV-01
+2025-03-08 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-15,intervention,CV-01
+2025-03-09 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-16,intervention,CV-01
+2025-03-10 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.3. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-17,intervention,CV-01
+2025-03-11 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-18,intervention,CV-01
+2025-03-12 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-19,intervention,CV-01
+2025-03-13 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-20,intervention,CV-01
+2025-03-14 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-21,intervention,CV-01
+2025-03-15 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-22,intervention,CV-01
+2025-03-16 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-23,intervention,CV-01
+2025-03-17 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-24,intervention,CV-01
+2025-03-18 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-25,intervention,CV-01
+2025-03-19 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-26,intervention,CV-01
+2025-03-20 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-27,intervention,CV-01
+2025-03-21 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-28,intervention,CV-01
+2025-03-22 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-29,intervention,CV-01
+2025-03-23 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-03-30,intervention,CV-01
+2025-03-30 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-06,intervention,CV-01
+2025-03-31 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-07,intervention,CV-01
+2025-04-01 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-08,intervention,CV-01
+2025-04-02 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-09,intervention,CV-01
+2025-04-03 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-10,intervention,CV-01
+2025-04-04 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-11,intervention,CV-01
+2025-04-05 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-12,intervention,CV-01
+2025-04-13 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-20,intervention,CV-01
+2025-04-14 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-21,intervention,CV-01
+2025-04-15 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-22,intervention,CV-01
+2025-04-16 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-23,intervention,CV-01
+2025-04-17 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-24,intervention,CV-01
+2025-04-18 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-25,intervention,CV-01
+2025-04-19 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-26,intervention,CV-01
+2025-04-20 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-27,intervention,CV-01
+2025-04-21 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-28,intervention,CV-01
+2025-04-22 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-29,intervention,CV-01
+2025-04-23 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-04-30,intervention,CV-01
+2025-04-24 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-01,intervention,CV-01
+2025-04-25 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-02,intervention,CV-01
+2025-04-26 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-03,intervention,CV-01
+2025-04-27 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-04,intervention,CV-01
+2025-04-28 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-05,intervention,CV-01
+2025-04-29 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-06,intervention,CV-01
+2025-04-30 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-07,intervention,CV-01
+2025-05-01 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-08,intervention,CV-01
+2025-05-02 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-09,intervention,CV-01
+2025-05-03 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-10,intervention,CV-01
+2025-05-04 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-11,intervention,CV-01
+2025-05-11 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.3. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-18,intervention,CV-01
+2025-05-12 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-19,intervention,CV-01
+2025-05-13 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-20,intervention,CV-01
+2025-05-14 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-21,intervention,CV-01
+2025-05-15 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-22,intervention,CV-01
+2025-05-16 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-23,intervention,CV-01
+2025-05-17 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-24,intervention,CV-01
+2025-05-18 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-25,intervention,CV-01
+2025-05-19 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-26,intervention,CV-01
+2025-05-20 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-27,intervention,CV-01
+2025-05-21 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-28,intervention,CV-01
+2025-05-22 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-29,intervention,CV-01
+2025-05-23 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-30,intervention,CV-01
+2025-05-24 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-05-31,intervention,CV-01
+2025-05-25 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-01,intervention,CV-01
+2025-05-26 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-02,intervention,CV-01
+2025-05-27 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-03,intervention,CV-01
+2025-05-28 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-04,intervention,CV-01
+2025-05-29 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-05,intervention,CV-01
+2025-05-30 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-06,intervention,CV-01
+2025-05-31 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-07,intervention,CV-01
+2025-06-01 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-08,intervention,CV-01
+2025-06-02 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-09,intervention,CV-01
+2025-06-07 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-14,intervention,CV-01
+2025-06-08 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-15,intervention,CV-01
+2025-06-09 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.3. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-16,intervention,CV-01
+2025-06-10 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-17,intervention,CV-01
+2025-06-11 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-18,intervention,CV-01
+2025-06-12 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-19,intervention,CV-01
+2025-06-13 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-20,intervention,CV-01
+2025-06-14 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-21,intervention,CV-01
+2025-06-15 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-22,intervention,CV-01
+2025-06-16 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-23,intervention,CV-01
+2025-06-17 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-24,intervention,CV-01
+2025-06-18 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-25,intervention,CV-01
+2025-06-19 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-26,intervention,CV-01
+2025-06-20 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-27,intervention,CV-01
+2025-06-21 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-28,intervention,CV-01
+2025-06-22 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-29,intervention,CV-01
+2025-06-23 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-06-30,intervention,CV-01
+2025-06-24 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-01,intervention,CV-01
+2025-06-25 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-02,intervention,CV-01
+2025-06-26 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-03,intervention,CV-01
+2025-06-27 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-04,intervention,CV-01
+2025-06-28 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-05,intervention,CV-01
+2025-06-29 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-06,intervention,CV-01
+2025-06-30 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-07,intervention,CV-01
+2025-07-01 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-08,intervention,CV-01
+2025-07-02 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-09,intervention,CV-01
+2025-07-03 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-10,intervention,CV-01
+2025-07-04 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-11,intervention,CV-01
+2025-07-05 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-12,intervention,CV-01
+2025-07-06 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-13,intervention,CV-01
+2025-07-07 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-14,intervention,CV-01
+2025-07-08 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-15,intervention,CV-01
+2025-07-09 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-16,intervention,CV-01
+2025-07-10 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-17,intervention,CV-01
+2025-07-11 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-18,intervention,CV-01
+2025-07-12 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-19,intervention,CV-01
+2025-07-13 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.4. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-20,intervention,CV-01
+2025-07-14 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-21,intervention,CV-01
+2025-07-15 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.1. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-22,intervention,CV-01
+2025-07-20 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.3. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-27,intervention,CV-01
+2025-07-21 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=73.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-28,intervention,CV-01
+2025-07-22 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.6. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-29,intervention,CV-01
+2025-07-23 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-30,intervention,CV-01
+2025-07-24 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-07-31,intervention,CV-01
+2025-07-25 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-01,intervention,CV-01
+2025-07-26 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-02,intervention,CV-01
+2025-07-27 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-03,intervention,CV-01
+2025-07-28 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-04,intervention,CV-01
+2025-07-29 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-05,intervention,CV-01
+2025-07-30 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-06,intervention,CV-01
+2025-07-31 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-07,intervention,CV-01
+2025-08-01 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-08,intervention,CV-01
+2025-08-02 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-09,intervention,CV-01
+2025-08-03 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-10,intervention,CV-01
+2025-08-04 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-11,intervention,CV-01
+2025-08-05 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-12,intervention,CV-01
+2025-08-06 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-13,intervention,CV-01
+2025-08-07 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-14,intervention,CV-01
+2025-08-08 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-15,intervention,CV-01
+2025-08-09 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-16,intervention,CV-01
+2025-08-10 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-17,intervention,CV-01
+2025-08-11 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-18,intervention,CV-01
+2025-08-12 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-19,intervention,CV-01
+2025-08-13 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-20,intervention,CV-01
+2025-08-14 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-21,intervention,CV-01
+2025-08-15 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-22,intervention,CV-01
+2025-08-16 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-23,intervention,CV-01
+2025-08-17 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-24,intervention,CV-01
+2025-08-18 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-25,intervention,CV-01
+2025-08-19 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-26,intervention,CV-01
+2025-08-20 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-27,intervention,CV-01
+2025-08-21 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-28,intervention,CV-01
+2025-08-22 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-29,intervention,CV-01
+2025-08-23 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=75.0. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-30,intervention,CV-01
+2025-08-24 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.9. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-08-31,intervention,CV-01
+2025-08-25 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-09-01,intervention,CV-01
+2025-08-26 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-09-02,intervention,CV-01
+2025-08-27 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-09-03,intervention,CV-01
+2025-08-28 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-09-04,intervention,CV-01
+2025-08-29 10:00 +0800,coach,Coach,Triggered CV-01 due to rhr_7d_avg=74.7. Action: deload week; sleep hygiene; -20% intensity. Follow-up: 2025-09-05,intervention,CV-01
+2025-01-29 10:00 +0800,nutritionist,Nutritionist,Triggered LIP-02 due to ldl_mgdl=145.3. Action: tighten diet; +1 cardio; omega-3. Follow-up: 2025-04-23,intervention;labs,LIP-02
+2025-03-26 10:00 +0800,nutritionist,Nutritionist,Triggered LIP-02 due to ldl_mgdl=144.1. Action: tighten diet; +1 cardio; omega-3. Follow-up: 2025-06-18,intervention;labs,LIP-02
+2025-06-18 10:00 +0800,nutritionist,Nutritionist,Triggered LIP-02 due to ldl_mgdl=142.3. Action: tighten diet; +1 cardio; omega-3. Follow-up: 2025-09-10,intervention;labs,LIP-02
