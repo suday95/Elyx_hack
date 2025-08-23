@@ -280,7 +280,7 @@ class ChatSimulator:
     def _get_member_message(self,message=None) -> str:
         """Get message from member (using OpenRouter or samples)"""
         # 30% chance to use OpenRouter for more varied responses
-        if random.random() < 0.3:
+        if random.random() < 0.7:
             try:
                 prompt = f"Assume you are client named {self.member.name} Generate a short health-related question with {self.member.condition} or give a follow up for this message{message},tell it in your pov"
                 response = self.api.get_response("openrouter", prompt)
@@ -472,7 +472,7 @@ def main():
     # Run simulation for 8 months (240 days)
     print(f"Starting simulation from {timeline.get_current_time()} for 240 days...")
     
-    for day in range(240):
+    for day in range(5):
         if day % 30 == 0:  # Monthly status
             print(f"Processing day {day+1}/240 ({timeline.get_current_time()})")
         
