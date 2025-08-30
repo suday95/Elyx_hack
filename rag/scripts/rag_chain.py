@@ -34,7 +34,7 @@ def log_prompt(prompt: str, role: str, token_count: int):
 
 # Configure Gemini API
 # Configure Gemini API keys
-#GEMINI_API_KEYS = os.getenv("GEMINI_API_KEYS", "AIzaSyCw5NinNmzbZ2riDgv7VFR1mdiVoOrlvQM","AIzaSyDuIy7Kkj3Lpm2HApjUqeaFDyPqlbaj4X0","AIzaSyDCyaLKgC1NUPLja4_qc38Ygi73_TZiLPs").split(',')
+#GEMINI_API_KEYS =
 #OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "your_openrouter_key")
 #current_key_index = 0
 
@@ -68,7 +68,7 @@ ROLE_PROMPTS = {
 }
 def load_gemini_keys():
     """Load and validate Gemini API keys from environment"""
-    raw_keys =  "AIzaSyCw5NinNmzbZ2riDgv7VFR1mdiVoOrlvQM , AIzaSyDuIy7Kkj3Lpm2HApjUqeaFDyPqlbaj4X0 , AIzaSyDCyaLKgC1NUPLja4_qc38Ygi73_TZiLPs"
+    raw_keys =  ""
     # Split and clean keys
     keys = [key.strip() for key in raw_keys.split(',') if key.strip()]
     
