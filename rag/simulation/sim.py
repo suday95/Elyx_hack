@@ -9,7 +9,7 @@ import json
 # Configuration
 ELYX_API = "http://localhost:8000/ask"  # Your RAG API
 OPENROUTER_API = "https://openrouter.ai/api/v1/chat/completions"
-OPENROUTER_API_KEY = "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"  # Get from https://openrouter.ai/keys
+OPENROUTER_API_KEY = ""  # Get from https://openrouter.ai/keys
 MEMBER_MSGS_CSV = "member_msgs.csv"  # Sample user messages
 OUTPUT_CSV = "/home/suday-nandan-reddy/Projects/AI/Elyx hackathon/rag/data/chats.csv"
 
